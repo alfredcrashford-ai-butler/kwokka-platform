@@ -1,0 +1,21 @@
+{
+  "name": "@kwokka/platform",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "applications/*",
+    "packages/*",
+    "games/*",
+    "games/*/frontend",
+    "games/*/backend",
+    "games/*/landing"
+  ],
+  "scripts": {
+    "dev:platform": "node scripts/dev-platform.js",
+    "dev:game": "node scripts/dev-game.js",
+    "test": "npm run test --workspaces",
+    "build": "npm run build --workspaces"
+  }
+}
