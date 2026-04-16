@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "esModuleInterop": true,
+    "declaration": true,
+    "outDir": "dist",
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    // below two lines needed to make sure typescript does not include node typings, which can be confused with web apis
+    "types": ["jest"],
+    "lib": ["ESNext", "DOM"]
+  },
+  "include": ["lib/**/*"],
+  "exclude": ["node_modules", "lib/**/*.spec.ts"]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "@kwokka/avatar-vue",
+  "type": "module",
+  "scripts": {
+    "start": "run-p build:watch dev",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "build-only": "vite build",
+    "build:watch": "nodemon --watch \"src/**/*.*\" --exec \"npm run build\"",
+    "dev": "npm --prefix='dev' run serve",
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwokka/avatar-vue.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/kwokka-avatar-vue.umd.cjs",
+  "module": "./dist/kwokka-avatar-vue.js",
+  "exports": {
+    ".": {
+      "types": "./dist/kwokka-avatar-vue.d.ts",
+      "import": "./dist/kwokka-avatar-vue.js",
+      "require": "./dist/kwokka-avatar-vue.umd.cjs"
+    },
+    "./style.css": "./dist/kwokka-avatar-vue.css"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "peerDependencies": {
+    "@kwokka/entities": "*",
+    "@kwokka/utils": "*",
+    "vue": ">=3",
+    "vue-facing-decorator": ">=3.0.4",
+    "vue-i18n": ">=11",
+    "reflect-metadata": ">=0.2.2"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "1.11.0",
+    "@tsconfig/node22": "22.0.1",
+    "@types/node": "22.14.1",
+    "@vitejs/plugin-vue": "5.2.3",
+    "@vue/eslint-config-prettier": "10.2.0",
+    "@vue/eslint-config-typescript": "14.5.0",
+    "@vue/tsconfig": "0.7.0",
+    "eslint": "9.24.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-unused-imports": "4.1.4",
+    "eslint-plugin-vue": "10.0.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.5.1",
+    "nodemon": "3.1.9",
+    "npm-run-all2": "7.0.2",
+    "prettier": "3.5.3",
+    "typescript": "5.8.3",
+    "vite": "6.3.5",
+    "vite-plugin-dts": "4.5.3",
+    "vue-tsc": "2.2.8"
+  }
+}

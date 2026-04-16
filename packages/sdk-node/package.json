@@ -1,0 +1,57 @@
+{
+  "name": "@kwokka/sdk-node",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "node_modules/.bin/eslint src/",
+    "test": "tsc --noEmit -p tsconfig.spec.json && jest",
+    "lint": "eslint . --ext .js,.cjs,.mjs,.ts,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwokka/sdk-node.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": "22"
+  },
+  "dependencies": {
+    "@kwokka/entities": "*",
+    "@kwokka/rights": "*",
+    "@kwokka/utils": "*",
+    "@types/jest": "29.5.14",
+    "@types/node": "22.14.1",
+    "@types/ws": "8.18.1",
+    "joi": "17.13.3",
+    "node-cache": "5.1.2",
+    "node-schedule": "2.1.1",
+    "ws": "8.18.1"
+  },
+  "devDependencies": {
+    "@types/jest": "29.5.14",
+    "@types/node": "22.14.1",
+    "@typescript-eslint/eslint-plugin": "8.29.1",
+    "@typescript-eslint/parser": "8.29.1",
+    "eslint": "9.24.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-unused-imports": "4.1.4",
+    "jest": "29.7.0",
+    "lint-staged": "15.5.1",
+    "prettier": "3.5.3",
+    "ts-jest": "29.3.2",
+    "ts-node": "10.9.2",
+    "typescript": "5.8.3"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --fix -c=.eslintrc.js"
+  }
+}

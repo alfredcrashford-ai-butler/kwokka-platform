@@ -1,0 +1,99 @@
+.kwokka-auth-box, .kwokka-auth-block {
+  --kwk-auth--border-radius: initial;
+  --kwk-auth--border: none;
+  --kwk-auth--padding: initial;
+  --kwk-auth--margin: initial;
+  --kwk-auth--gap: initial;
+  --kwk-auth--min-width: auto;
+  --kwk-auth--max-width: auto;
+  --kwk-auth--min-height: auto;
+  --kwk-auth--max-height: auto;
+  --kwk-auth--width: auto;
+  --kwk-auth--height: auto;
+  border-radius: var(--kwk-auth--border-radius);
+  border: var(--kwk-auth--border);
+  padding: var(--kwk-auth--padding);
+  margin: var(--kwk-auth--margin);
+  gap: var(--kwk-auth--gap);
+  max-width: var(--kwk-auth--max-width);
+  min-width: var(--kwk-auth--min-width);
+  max-height: var(--kwk-auth--max-height);
+  min-height: var(--kwk-auth--min-height);
+  width: var(--kwk-auth--width);
+  height: var(--kwk-auth--height);
+  box-shadow: var(--kwk-auth--box-shadow);
+}
+
+.kwokka-auth-9box, .kwokka-auth-block {
+  --kwk-auth--9box--width: 0px;
+  --kwk-auth--9box--height: 0px;
+  --kwk-auth--9box--top-left: none;
+  --kwk-auth--9box--top: none;
+  --kwk-auth--9box--top-right: none;
+  --kwk-auth--9box--left: none;
+  --kwk-auth--9box--center: none;
+  --kwk-auth--9box--right: none;
+  --kwk-auth--9box--bottom-left: none;
+  --kwk-auth--9box--bottom: none;
+  --kwk-auth--9box--bottom-right: none;
+  background-image: var(--kwk-auth--9box--top-left), var(--kwk-auth--9box--top), var(--kwk-auth--9box--top-right),
+    var(--kwk-auth--9box--left), var(--kwk-auth--9box--center), var(--kwk-auth--9box--right),
+    var(--kwk-auth--9box--bottom-left), var(--kwk-auth--9box--bottom), var(--kwk-auth--9box--bottom-right);
+  background-position:
+    0px 0px,
+    center top,
+    100% 0px,
+    0px center,
+    50% center,
+    100% center,
+    0px 100%,
+    center bottom,
+    100% 100%;
+  background-size:
+    var(--kwk-auth--9box--width) var(--kwk-auth--9box--height),
+    calc(100% - var(--kwk-auth--9box--width) * 2 + 2px) var(--kwk-auth--9box--height),
+    var(--kwk-auth--9box--width) var(--kwk-auth--9box--height),
+    var(--kwk-auth--9box--width) calc(100% - var(--kwk-auth--9box--height) * 2 + 2px),
+    calc(100% - var(--kwk-auth--9box--width) * 2 + 2px) calc(100% - var(--kwk-auth--9box--height) * 2 + 2px),
+    var(--kwk-auth--9box--width) calc(100% - var(--kwk-auth--9box--height) * 2 + 2px),
+    var(--kwk-auth--9box--width) var(--kwk-auth--9box--height),
+    calc(100% - var(--kwk-auth--9box--width) * 2 + 2px) var(--kwk-auth--9box--height),
+    var(--kwk-auth--9box--width) var(--kwk-auth--9box--height);
+  background-repeat: no-repeat;
+  /* The next line fixes the downscale blur issue */
+  image-rendering: pixelated;
+}
+
+.kwokka-auth-text, .kwokka-auth-link, .kwokka-auth-block {
+  --kwk-auth--font-family: inherit;
+  --kwk-auth--font-size: initial;
+  --kwk-auth--line-height: initial;
+  --kwk-auth--font-weight: initial;
+  --kwk-auth--text-shadow: initial;
+  font-family: var(--kwk-auth--font-family);
+  font-size: var(--kwk-auth--font-size);
+  line-height: var(--kwk-auth--line-height);
+  font-weight: var(--kwk-auth--font-weight);
+  text-shadow: var(--kwk-auth--text-shadow);
+}
+
+.kwokka-auth-filter, .kwokka-auth-link, .kwokka-auth-block {
+  --kwk-auth--filter: none;
+  filter: var(--kwk-auth--filter);
+}
+
+.kwokka-auth-color, .kwokka-auth-link, .kwokka-auth-block {
+  --kwk-auth--color: inherit;
+  --kwk-auth--background-color: none;
+  color: var(--kwk-auth--color);
+  background-color: var(--kwk-auth--background-color);
+}
+
+.kwokka-auth-link {
+  --kwk-auth--color: #ef8134;
+  text-decoration: none;
+}
+
+.kwokka-auth-link:visited {
+  opacity: 0.75;
+}

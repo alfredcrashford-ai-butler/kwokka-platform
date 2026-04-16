@@ -1,0 +1,15 @@
+export enum EnvVarName {
+  JwtKey = 'JWT_KEY',
+  MongodbUri = 'MONGODB_URI',
+  Port = 'PORT',
+  Host = 'HOST',
+  ServiceName = 'SERVICE_NAME',
+  LogLevel = 'LOG_LEVEL',
+  MailersendApiKey = 'MAILERSEND_API_KEY',
+  KafkaClientId = 'KAFKA_CLIENT_ID',
+  KafkaBroker1 = 'KAFKA_BROKER_1',
+  KafkaBroker2 = 'KAFKA_BROKER_2',
+  KafkaBroker3 = 'KAFKA_BROKER_3',
+  KafkaLogLevel = 'KAFKA_LOG_LEVEL',
+  SentryDsn = 'SENTRY_DSN',
+}

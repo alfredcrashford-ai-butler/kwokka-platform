@@ -1,0 +1,29 @@
+{
+  "name": "@kwokka/avatar-vue-dev",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "vite --host"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "dependencies": {
+    "reflect-metadata": "0.2.2",
+    "vue": "3.5.13",
+    "vue-facing-decorator": "3.0.4",
+    "vue-i18n": "11.1.3",
+    "@kwokka/avatar-vue": "file:../"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "22.0.1",
+    "@types/node": "22.14.1",
+    "@vitejs/plugin-vue": "5.2.3",
+    "@vue/tsconfig": "0.7.0",
+    "npm-run-all2": "7.0.2",
+    "typescript": "5.8.3",
+    "vite": "6.2.6",
+    "vue-tsc": "2.2.8"
+  }
+}

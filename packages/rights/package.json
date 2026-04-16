@@ -1,0 +1,35 @@
+{
+  "name": "@kwokka/rights",
+  "scripts": {
+    "lint": "eslint . --ext .js,.cjs,.mjs,.ts,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write lib/",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwokka/rights.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": "22"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "8.29.1",
+    "@typescript-eslint/parser": "8.29.1",
+    "eslint": "9.24.0",
+    "lint-staged": "12.3.2",
+    "prettier": "3.5.3",
+    "typescript": "5.8.3"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --fix -c=.eslintrc.js"
+  }
+}
