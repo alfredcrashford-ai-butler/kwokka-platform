@@ -1,0 +1,92 @@
+// MAPS
+
+$font-weight: (
+  'black': 900,
+  'bold': 700,
+  'semibold': 500,
+  'regular': 400,
+) !default;
+
+@mixin UiFontWeight($size) {
+  font-weight: map.get($font-weight, #{$size});
+}
+
+// HEADINGS
+
+@mixin UiTypographyHeading1() {
+  font-size: 32px;
+  line-height: 36px;
+  @include UiFontWeight(bold);
+}
+
+@mixin UiTypographyHeading2() {
+  font-size: 28px;
+  line-height: 32px;
+  @include UiFontWeight(bold);
+}
+
+@mixin UiTypographyHeading3() {
+  font-size: 24px;
+  line-height: 28px;
+  @include UiFontWeight(semibold);
+}
+
+@mixin UiTypographyHeading4() {
+  font-size: 22px;
+  line-height: 26px;
+  @include UiFontWeight(semibold);
+}
+
+@mixin UiTypographyHeading5() {
+  font-size: 20px;
+  line-height: 24px;
+  @include UiFontWeight(semibold);
+}
+
+@mixin UiTypographyHeading6() {
+  font-size: 18px;
+  line-height: 22px;
+  @include UiFontWeight(semibold);
+}
+
+// PARAGRAPHS
+
+@mixin UiTypographyParagraph1() {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin UiTypographyParagraph2() {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin UiTypographyParagraph3() {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin UiTypographyParagraph4() {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+// INTERACTIVE ELEMENTS
+
+@mixin UiTypographyLink {
+  @include UiTheme() {
+    color: UiColor(yellow-500);
+  }
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+@mixin UiTypographyModifyMonospace {
+  font-family: 'Lucida Console', 'Courier New', monospace;
+  @include UiFontWeight(bold);
+}

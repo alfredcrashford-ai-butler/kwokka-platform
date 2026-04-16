@@ -1,0 +1,10 @@
+$border-radius-sizes: (
+  'sm': $grid-step,
+  'md': $grid-step * 2,
+  'lg': $grid-step * 3,
+  'xl': $grid-step * 6,
+) !default;
+
+@mixin UiBorderRadius($size) {
+  border-radius: map.get($border-radius-sizes, #{$size});
+}

@@ -1,0 +1,111 @@
+$_input-height: $grid-step * 13;
+
+@mixin UiLayout(
+  $desktop-padding: map.get($grid-spacing, 6),
+  $mobile-padding: map.get($grid-spacing-mobile, 6),
+  $max-width: $content-max-width
+) {
+  flex-shrink: 0;
+  flex-grow: 1;
+  padding: 0 $desktop-padding;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @if ($max-width != null) {
+    max-width: $max-width;
+  }
+
+  @include UiMediaMobile {
+    padding: 0 $mobile-padding;
+  }
+}
+
+// adds standart input behavior
+@mixin UiInputAppearance($height: $_input-height) {
+  @include UiTypographyParagraph1();
+  @include UiBorderRadius(md);
+  @include UiPadding(6, left);
+  @include UiPadding(6, right);
+
+  height: $height;
+  width: 100%;
+
+  @include UiTheme() {
+    background-color: UiColor(shade-800);
+    border: 2px solid UiColor(shade-100);
+    color: UiColor(shade-100);
+  }
+
+  &::placeholder {
+    font-size: inherit;
+    font-weight: inherit;
+    @include UiTheme() {
+      color: UiColor(shade-300);
+    }
+  }
+}
+
+// adds standart button behavior
+@mixin UiButtonStates() {
+  &::after {
+    @include UiTheme() {
+      $overlay-color: UiColor(shade-100) !default;
+      background-color: $overlay-color;
+    }
+  }
+
+  &:focus-visible {
+    &::after {
+      opacity: 0.1;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.2;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.45;
+  }
+}
+
+// resets default button styles, like borders, appearance, and so on
+@mixin UiButtonAppearance($border-size: 2px) {
+  position: relative;
+  border: $border-size solid transparent;
+  cursor: pointer;
+  background-color: transparent;
+
+  color: inherit;
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    pointer-events: none;
+
+    // negotiate the border width
+    width: calc(100% + #{$border-size * 2});
+    height: calc(100% + #{$border-size * 2});
+    opacity: 0;
+    border-radius: inherit;
+
+    top: -$border-size;
+    left: -$border-size;
+  }
+}
+
+@mixin UiBackgroundPattern() {
+  background-image: url('/assets/background_pattern.svg');
+}

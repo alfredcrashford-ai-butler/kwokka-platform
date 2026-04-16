@@ -1,0 +1,132 @@
+// fallback for font family to support
+$font-fallback: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('/fonts/nunito-v20-cyrillic-regular.woff2') format('woff2'),
+       url('/fonts/nunito-v20-cyrillic-regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('/fonts/nunito-v20-cyrillic-500.woff2') format('woff2'),
+       url('/fonts/nunito-v20-cyrillic-500.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('/fonts/nunito-v20-cyrillic-700.woff2') format('woff2'),
+       url('/fonts/nunito-v20-cyrillic-700.woff') format('woff');
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('/fonts/nunito-v20-latin-500.woff2') format('woff2'),
+       url('/fonts/nunito-v20-latin-500.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('/fonts/nunito-v20-latin-regular.woff2') format('woff2'),
+       url('/fonts/nunito-v20-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('/fonts/nunito-v20-latin-700.woff2') format('woff2'),
+       url('/fonts/nunito-v20-latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('/fonts/chakra-petch-v9-latin-regular.woff2') format('woff2'),
+       url('/fonts/chakra-petch-v9-latin-regular.woff') format('woff'),
+       url('/fonts/chakra-petch-v9-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 700;
+  src: local('')
+       url('/fonts/chakra-petch-v9-latin-700.woff2') format('woff2'),
+       url('/fonts/chakra-petch-v9-latin-700.woff') format('woff'),
+       url('/fonts/chakra-petch-v9-latin-700.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/exo-2-v21-cyrillic_latin-regular.woff2') format('woff2'),
+       url('/fonts/exo-2-v21-cyrillic_latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/exo-2-v21-cyrillic_latin-500.woff2') format('woff2'),
+       url('/fonts/exo-2-v21-cyrillic_latin-500.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/exo-2-v21-cyrillic_latin-700.woff2') format('woff2'),
+       url('/fonts/exo-2-v21-cyrillic_latin-700.ttf') format('truetype');
+}
+
+/* piazzolla-700 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Piazzolla';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/piazzolla-v35-cyrillic_latin-700.woff2') format('woff2'),
+       url('/fonts/piazzolla-v35-cyrillic_latin-700.ttf') format('truetype');
+}
+
+/* piazzolla-900 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Piazzolla';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/piazzolla-v35-cyrillic_latin-900.woff2') format('woff2'),
+       url('/fonts/piazzolla-v35-cyrillic_latin-900.ttf') format('truetype');
+}

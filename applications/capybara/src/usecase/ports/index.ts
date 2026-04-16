@@ -1,0 +1,9 @@
+export { DecorationRepository } from './decoration.repository';
+export { ItemInstanceRepository } from './item-instance.repository';
+export { ItemTradeRepository } from './item-trade.repository'
+export { ItemTransactionRepository } from './item-transaction.repository'
+export { ItemRepository } from './item.repository';
+export { ProfileDecorationsRepository } from './profile-decorations.repository';
+export { ProfileRepository } from './profile.repository';
+export { TraitRepository } from './trait.repository';
+export { TraitInstanceRepository } from './trait-instance.repository';

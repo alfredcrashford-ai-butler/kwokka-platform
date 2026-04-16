@@ -1,0 +1,100 @@
+$base: (
+  'yellow-500': #ef8134,
+
+  'pink-500': #d55476,
+
+  'orange-500': #e65c2e,
+
+  'blue-500': #2b00b0,
+
+  'cyan-500': #56a7ba,
+
+  'green-700': #008f7c,
+  'green-500': #00bfa6,
+  'green-200': #adfff4,
+
+  'red-700': #9a1c0f,
+  'red-500': #e25144,
+  'red-200': #f4beb9,
+
+  'shade-900': #190039,
+  'shade-800': #30194d,
+  'shade-700': #45305f,
+  'shade-600': #634983,
+  'shade-400': #967cb6,
+  'shade-300': #c3b1ce,
+  'shade-200': #dfd3e6,
+  'shade-100': #ffffff,
+
+  'palette-discord': #5865f2,
+  'item-trigger-have-1': #b59b47,
+  'item-trigger-have-2': #f5dd90,
+  'item-trigger-use-1': #80a426,
+  'item-trigger-use-2': #c3f73a,
+);
+
+@function UiBaseColor($value) {
+  @return map-get($base, #{$value});
+}
+
+$themes: (
+  'main': (
+    'yellow-500': UiBaseColor(yellow-500),
+    'pink-500': UiBaseColor(pink-500),
+    'orange-500': UiBaseColor(orange-500),
+    'blue-500': UiBaseColor(blue-500),
+    'cyan-500': UiBaseColor(cyan-500),
+    'red-500': UiBaseColor(red-500),
+    'positive-light': UiBaseColor(green-700),
+    'positive': UiBaseColor(green-500),
+    'positive-dark': UiBaseColor(green-200),
+    'negative-light': UiBaseColor(red-700),
+    'negative': UiBaseColor(red-500),
+    'negative-dark': UiBaseColor(red-200),
+    'neutral': UiBaseColor(yellow-500),
+    'shade-900': UiBaseColor(shade-900),
+    'shade-800': UiBaseColor(shade-800),
+    'shade-700': UiBaseColor(shade-700),
+    'shade-600': UiBaseColor(shade-600),
+    'shade-400': UiBaseColor(shade-400),
+    'shade-300': UiBaseColor(shade-300),
+    'shade-200': UiBaseColor(shade-200),
+    'shade-100': UiBaseColor(shade-100),
+    'palette-discord': UiBaseColor(palette-discord),
+    'item-trigger-have-1': UiBaseColor(item-trigger-have-1),
+    'item-trigger-have-2': UiBaseColor(item-trigger-have-2),
+    'item-trigger-use-1': UiBaseColor(item-trigger-use-1),
+    'item-trigger-use-2': UiBaseColor(item-trigger-use-2),
+  ),
+);
+
+$default-colors: map.get($themes, light) !default;
+$colors: $default-colors !default;
+
+@function UiColor($name) {
+  @return map.get($colors, #{$name});
+}
+
+@mixin UiTheme($themes: $themes) {
+  @each $theme, $theme-colors in $themes {
+    .app_theme-#{$theme} & {
+      $colors: $theme-colors !global;
+
+      @content;
+
+      $colors: $default-colors !global;
+    }
+  }
+}
+
+@mixin UiThemeElement($themes: $themes) {
+  @each $theme, $theme-colors in $themes {
+    &.app_theme-#{$theme} {
+      $colors: $theme-colors !global;
+
+      @content;
+
+      $colors: $default-colors !global;
+    }
+  }
+}

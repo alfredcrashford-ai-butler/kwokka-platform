@@ -1,0 +1,196 @@
+$transitions: (
+  'bounce': cubic-bezier(0.35, 1, 0.5, 1.25),
+  'spring': cubic-bezier(0.44, -0.3, 0.57, 1.19),
+  'default': ease-in-out,
+) !default;
+
+@function UiTransition($name: 'default') {
+  @return map.get($transitions, #{$name});
+}
+
+@mixin UiInlineAnimation($duration: null) {
+  $name: kwokka-inline-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-name: $name;
+  @if $duration {
+    animation-duration: $duration;
+  }
+}
+
+@keyframes UiTransitionScaleIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes UiTransitionScaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes UiTransitionOpacityGlowing {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes UiTransitionFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes UiTransitionFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes UiTransitionSlideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes UiTransitionSlideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes UiTransitionSlideOutLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes UiTransitionSlideOutRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes UiTransitionRotation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes UiAnimationBurstShaking {
+  0% {
+    transform: skewX(-30deg);
+  }
+  5% {
+    transform: skewX(30deg);
+  }
+  10% {
+    transform: skewX(-30deg);
+  }
+  15% {
+    transform: skewX(30deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+@keyframes UiAnimationShaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  2% {
+    transform: rotate(1deg);
+  }
+  4% {
+    transform: rotate(0deg);
+  }
+  6% {
+    transform: rotate(-1deg);
+  }
+  8% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(1deg);
+  }
+  12% {
+    transform: rotate(0deg);
+  }
+  14% {
+    transform: rotate(-1deg);
+  }
+  16% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes UiAnimationPulsation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes UiAnimationGlowing {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.25);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}

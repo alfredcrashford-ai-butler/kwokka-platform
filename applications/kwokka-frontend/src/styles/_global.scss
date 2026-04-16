@@ -1,0 +1,35 @@
+html {
+  @include UiTypographyParagraph1();
+  font-family: Nunito, $font-fallback;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#app,
+.app {
+  height: 100%;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+}
+
+.app {
+  overflow: auto;
+  transition:
+    color linear 100ms,
+    background-color linear 100ms;
+  @include UiThemeElement() {
+    color: UiColor(shade-100);
+    background-color: UiColor(shade-900);
+  }
+}
+
+a:not(.ui-link-reset) {
+  @include UiTypographyLink();
+}
+
+// ELEMENTS
+@import 'elements/ui-overlay';
+@import 'elements/ui-hide';
+@import 'elements/ui-link-reset';
+@import 'elements/ui-sr-only';

@@ -1,0 +1,28 @@
+@mixin SpaceCustomsSpaceObjectAnimation {
+  animation-name: SpaceCustomsFloating, SpaceCustomsLighting;
+  animation-duration: 8s, 2500ms;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@mixin SpaceCustomsVisualAnimation {
+  animation-name: SpaceCustomsFloating;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@mixin SpaceCustomsInterractable {
+  cursor: pointer;
+  transition: filter ease-in-out 100ms;
+
+  &:hover, &:focus {
+    filter: brightness(1.25);
+  }
+
+  &:active {
+    filter: brightness(1.4);
+  }
+}

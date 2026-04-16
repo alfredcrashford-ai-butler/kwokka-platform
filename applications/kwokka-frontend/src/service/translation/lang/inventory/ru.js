@@ -1,0 +1,38 @@
+export default {
+  title: 'Инвентарь',
+  transferrable: 'Можно передавать',
+  untransferrable: 'Нельзя передавать',
+  noDescription: 'Нет описания.',
+  effects: 'Эффекты',
+  otherActions: 'Другие действия',
+  manage: {
+    accountIdLabel: 'Id аккаунта',
+    accountIdPlaceholder: 'Введите Id аккаунта',
+    accountExists: 'Аккаунт существует',
+    profileName: 'Имя профиля',
+    giveItem: 'Дать предмет',
+    to: 'Кому',
+    yourself: 'Себе/себя',
+    accountId: 'Id аккаунта',
+    quantityLabel: 'Количество',
+    quantityPlaceholder: 'Введите количество',
+    itemIdLabel: 'Id предмета',
+    itemIdPlaceholder: 'Введите Id предмета',
+    itemNotFound: 'Предмет не найден',
+    itemGivenSuccessfully: 'Предмет был успешно передан.',
+    takeItem: 'Забрать предмет',
+    itemTakenSuccessfully: 'Предмет был успешно забран.',
+    from: 'От кого',
+  },
+  actionRanSuccessfully: 'Действие было успешно выполнено.',
+  actions: {
+    have: {
+      title: 'Владение',
+      tip: 'Применяет особый эффект, когда находится в вашем инвентаре.',
+    },
+    use: {
+      title: 'Использование',
+      tip: 'Может быть использован для получения особого эффекта.',
+    },
+  },
+};

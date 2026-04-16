@@ -1,0 +1,56 @@
+export default {
+  title: 'Account management',
+  actions: {
+    title: 'Actions',
+    activate: 'Activate',
+    deactivate: 'Deactivate',
+    delete: 'Delete',
+    revokeAccess: 'Revoke access',
+    revokeConfirmTitle: 'Revoke access for this account?',
+    revokeConfirmText: 'All current sessions and tokens of this account will be revoked.',
+    deactivateConfirmTitle: 'Deactivate this account?',
+    deactivateConfirmText:
+      'This account will be marked as inactive and will not be able to perform any actions on the platform.',
+    activateConfirmTitle: 'Activate this account?',
+    activateConfirmText: 'This account will be marked as active and will be able to access the platform.',
+    deleteConfirmTitle: 'Delete this account?',
+    deleteConfirmText: 'This account will be deleted permanently and it will not be able to restore it anymore.',
+    deletedSuccessfully: 'The account has been successfully deleted.',
+    revokedSuccessfully: 'The access of the account has been successfully revoked.',
+    deactivatedSuccessfully: 'The account has been successfully deactivated.',
+    activatedSuccessfully: 'The account has been successfully activated.',
+  },
+  credentials: {
+    title: 'Credentials',
+  },
+  details: {
+    title: 'Account details',
+  },
+  tokens: {
+    title: 'Tokens',
+    token: 'Token',
+    revoke: 'Revoke',
+    revokeCorrelation: 'Revoke correlation',
+    revokedCorrelationSuccessfully: 'Successfully revoked all tokens in correlation.',
+  },
+  roles: {
+    title: 'Roles',
+    empty: 'Empty',
+    setup: 'Setup',
+    roleDialogTitle: 'Setup account custom roles',
+  },
+  profile: {
+    title: 'Profile',
+    empty: 'Empty',
+    setup: 'Setup',
+    successfullyUpdated: 'Profile was successfully updated.',
+  },
+  traits: {
+    title: 'Traits',
+    empty: 'No traits',
+    traitDialogTitle: 'Edit trait value',
+    traitDialogTraitInfo: 'Trait info',
+    traitDialogValueLabel: 'Trait value',
+    traitDialogValuePlaceholder: 'Enter trait value',
+  },
+};

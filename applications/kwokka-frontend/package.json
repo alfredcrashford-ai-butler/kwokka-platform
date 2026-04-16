@@ -1,0 +1,61 @@
+{
+  "name": "kwokka-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite --host",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "size": "npm run build && size-limit",
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "dependencies": {
+    "@kwokka/auth-vue": "*",
+    "@kwokka/avatar-vue": "*",
+    "@kwokka/entities": "*",
+    "@kwokka/rights": "*",
+    "@kwokka/utils": "*",
+    "@sentry/browser": "9.12.0",
+    "@stripe/stripe-js": "7.0.0",
+    "es6-symbol": "3.1.4",
+    "git-describe": "4.1.1",
+    "inversify": "7.5.0",
+    "inversify-inject-decorators": "3.1.0",
+    "reflect-metadata": "0.2.2",
+    "register-service-worker": "1.7.2",
+    "vue": "3.5.13",
+    "vue-facing-decorator": "3.0.4",
+    "vue-i18n": "11.1.3",
+    "vue-router": "4.5.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "1.11.0",
+    "@size-limit/preset-app": "11.2.0",
+    "@tsconfig/node22": "22.0.1",
+    "@types/node": "22.14.1",
+    "@vitejs/plugin-vue": "5.2.3",
+    "@vue/eslint-config-prettier": "10.2.0",
+    "@vue/eslint-config-typescript": "12.0.0",
+    "@vue/tsconfig": "0.7.0",
+    "eslint": "8.49.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-unused-imports": "3.1.0",
+    "eslint-plugin-vue": "9.17.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.5.1",
+    "npm-run-all2": "7.0.2",
+    "prettier": "3.5.3",
+    "sass": "1.86.3",
+    "size-limit": "11.2.0",
+    "typescript": "5.8.3",
+    "vite": "6.3.5",
+    "vue-tsc": "2.2.8"
+  }
+}

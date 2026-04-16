@@ -1,0 +1,56 @@
+export default {
+  title: 'Управление аккаунтом',
+  actions: {
+    title: 'Действия',
+    activate: 'Активировать',
+    deactivate: 'Деактивировать',
+    delete: 'Удалить',
+    revokeAccess: 'Отозвать доступ',
+    revokeConfirmTitle: 'Отозвать доступ этого аккаунта?',
+    revokeConfirmText: 'Все текущие сеансы и токены этого аккаунта будут отозваны.',
+    deactivateConfirmTitle: 'Деактивировать этот аккаунт?',
+    deactivateConfirmText:
+      'Этот аккаунт будет помечен как неактивный и не сможет выполнять никаких действий на платформе.',
+    activateConfirmTitle: 'Активировать этот аккаунт?',
+    activateConfirmText: 'Этот аккаунт будет помечен как активный и сможет получить доступ к платформе.',
+    deleteConfirmTitle: 'Удалить этот аккаунт?',
+    deleteConfirmText: 'Этот аккаунт будет удален навсегда и его невозможно будет восстановить.',
+    deletedSuccessfully: 'Аккаунт был успешно удалён.',
+    revokedSuccessfully: 'Доступ аккаунта был успешно отозван.',
+    deactivatedSuccessfully: 'Аккаунт был успешно деактивирован.',
+    activatedSuccessfully: 'Аккаунт был успешно активирован.',
+  },
+  credentials: {
+    title: 'Учетные данные',
+  },
+  details: {
+    title: 'Информация',
+  },
+  tokens: {
+    title: 'Токены',
+    token: 'Токен',
+    revoke: 'Отозвать',
+    revokeCorrelation: 'Отозвать корреляцию',
+    revokedCorrelationSuccessfully: 'Все токены в корреляции были успешно отозваны.',
+  },
+  roles: {
+    title: 'Роли',
+    empty: 'Пусто',
+    setup: 'Настроить',
+    roleDialogTitle: 'Настроить кастомные роли',
+  },
+  profile: {
+    title: 'Профиль',
+    empty: 'Пусто',
+    setup: 'Настроить',
+    successfullyUpdated: 'Профиль был успешно изменен.',
+  },
+  traits: {
+    title: 'Трейты',
+    empty: 'Нет трейтов',
+    traitDialogTitle: 'Настроить значение трейта',
+    traitDialogTraitInfo: 'Информация о трейте',
+    traitDialogValueLabel: 'Значение трейта',
+    traitDialogValuePlaceholder: 'Введите значение трейта',
+  },
+};

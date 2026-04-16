@@ -1,0 +1,38 @@
+export default {
+  title: 'Управление игрой',
+  details: {
+    title: 'Детали',
+    description: 'Управляйте своей игрой, обновляйте её, изменяйте описания и внешний вид.',
+    editGame: 'Редактировать игру',
+    updatedSuccessfully: 'Игра была успешно обновлена.',
+    deletedSuccessfully: 'Игра была успешно удалена.',
+  },
+  lobbies: {
+    title: 'Лобби',
+    description:
+      'Управляйте лобби для своей игры. Лобби — это различные режимы и способы игры. Это может быть определенный уровень, соревновательный/быстрый матч или сезонное событие.',
+    editLobby: 'Редактировать лобби',
+    addLobby: 'Добавить лобби',
+    keyLabel: 'Ключ лобби',
+    keyPlaceholder: 'Введите уникальный ключ лобби',
+    minPlayersLabel: 'Минимум игроков',
+    minPlayersPlaceholder: 'Введите минимальное количество игроков в лобби',
+    maxPlayersLabel: 'Максимум игроков',
+    maxPlayersPlaceholder: 'Введите максимальное количество игроков в лобби',
+    configLabel: 'Настройки',
+    configPlaceholder: 'Введите настройки в формате JSON',
+    availableSinceLabel: 'Доступно с',
+    availableSincePlaceholder: 'С какого момента доступно',
+    availableTillLabel: 'Доступно до',
+    availableTillPlaceholder: 'До какого момента доступно',
+    delete: 'Удалить',
+    deleteConfirmTitle: 'Вы уверены?',
+    deleteConfirmDescription: 'Это лобби больше не будет доступно, все связанные игровые сессии также будут удалены.',
+    createdSuccessfully: 'Лобби было успешно создано.',
+    updatedSuccessfully: 'Лобби было успешно обновлено.',
+    deletedSuccessfully: 'Лобби было успешно удалено.',
+  },
+  monitoring: {
+    title: 'Мониторинг',
+  },
+};

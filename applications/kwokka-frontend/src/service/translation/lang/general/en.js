@@ -1,0 +1,92 @@
+export default {
+  onboarding: {
+    close: 'Close',
+    next: 'Next',
+    finish: 'Finish',
+  },
+  discordInvite: 'Join our Discord community',
+  construction: 'Under construction...',
+  settings: 'Settings',
+  uiKit: {
+    dialog: {
+      defaultPrimaryButtonText: 'Ok',
+      defaultSecondaryButtonText: 'Cancel',
+    },
+    expand: {
+      defaultOpenText: 'Show details',
+      defaultCloseText: 'Hide details',
+    },
+  },
+  components: {
+    signOutButton: {
+      text: 'Sign out',
+      confirmation: 'Are you sure you want to sign out?',
+    },
+    credentialsList: {
+      deletedSuccessfully: 'Credential deleted successfully.',
+      verificationSentSuccessfully: 'Verification sent successfully.',
+    },
+    credentialDialog: {
+      title: 'Credential',
+      openAccountDetails: 'Open account details',
+      sendVerification: 'Send verification',
+      delete: 'Delete',
+      confirmDeleteTitle: 'Are you sure?',
+      confirmDeleteDescription:
+        'After deleting this credential the account associated with it will not be able to sign in using it.',
+    },
+    itemCard: {
+      have: 'Have',
+      haveTooltip: 'This item applies a special effect when you have it in your inventory.',
+      use: 'Use',
+      useTooltip: 'This item can be used.',
+      rarity: {
+        junk: 'Junk',
+        common: 'Common',
+        uncommon: 'Uncommon',
+        rare: 'Rare',
+        epic: 'Epic',
+        legendary: 'Legendary',
+        immortal: 'Immortal',
+      },
+    },
+    addEditGameDialog: {
+      addGame: 'Add game',
+      editGame: 'Edit game',
+      addEditGameKeyLabel: 'Key',
+      addEditGameKeyPlaceholder: 'Enter unique game key',
+      applicationAccountLabel: 'Application account id',
+      applicationAccountPlaceholder: 'Enter application account id',
+      tagsLabel: 'Tags',
+      tagsPlaceholder: 'Separated by comma, i.e. tag1,tag2,tag3',
+      availableSinceLabel: 'Available since',
+      availableSincePlaceholder: 'Since when game is available',
+      availableTillLabel: 'Available till',
+      availableTillPlaceholder: 'Till when game is available',
+      delete: 'Delete',
+      deleteConfirmTitle: 'Are you sure?',
+      deleteConfirmDescription:
+        'This game is not going to be accessible anymore, all related lobbies and game instances are going to be deleted as well.',
+    },
+    gameStats: {
+      activePlayers: 'Active Players',
+      activeInstances: 'Active Games',
+      averagePlayers: 'Average Players per Game',
+      totalPlayers: 'Total Players',
+      averageDuration: 'Average Game Duration',
+      startedInstances: 'Started Games',
+      finishedInstances: 'Finished Games',
+      abandonedInstances: 'Abandoned Games',
+      totalInstances: 'Total Games',
+      from: 'From',
+      to: 'Till',
+      now: 'Now',
+    },
+  },
+  timeDiff: {
+    now: 'just now',
+    minutes: 'just now | 1 minute ago | {n} minutes ago',
+    moreThanHour: 'more than an hour ago',
+  },
+  copied: 'Copied to clipboard!',
+};

@@ -1,0 +1,38 @@
+export default {
+  title: 'Inventory',
+  transferrable: 'Can be transferred',
+  untransferrable: 'Can not be transferred',
+  noDescription: 'No description.',
+  effects: 'Effects',
+  otherActions: 'Other actions',
+  manage: {
+    accountIdLabel: 'Account Id',
+    accountIdPlaceholder: 'Enter Id of account',
+    accountExists: 'Account exists',
+    profileName: 'Profile name',
+    giveItem: 'Give item',
+    to: 'To',
+    yourself: 'Yourself',
+    accountId: 'Account Id',
+    quantityLabel: 'Quantity',
+    quantityPlaceholder: 'Enter quantity',
+    itemIdLabel: 'Item Id',
+    itemIdPlaceholder: 'Enter Id of item',
+    itemNotFound: 'Item not found',
+    itemGivenSuccessfully: 'Item was successfully given.',
+    takeItem: 'Take item',
+    itemTakenSuccessfully: 'Item was successfully taken.',
+    from: 'From',
+  },
+  actionRanSuccessfully: 'Action was successfully ran.',
+  actions: {
+    have: {
+      title: 'Have',
+      tip: 'Applies a special effect when you have it in your inventory.',
+    },
+    use: {
+      title: 'Use',
+      tip: 'Can be used to get a special effect.',
+    },
+  },
+};

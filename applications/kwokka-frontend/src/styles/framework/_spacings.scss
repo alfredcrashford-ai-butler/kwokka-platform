@@ -1,0 +1,145 @@
+$grid-step: 4px !default;
+
+$content-max-width-large: $grid-step * 320 !default; // 1280px
+
+$content-max-width: $grid-step * 258 !default; // 1032px
+
+$content-max-width-medium: $grid-step * 180 !default; // 720px
+
+$content-max-width-small: $grid-step * 140 !default; // 560px
+
+$grid-spacing: (
+  1: $grid-step,
+  // 4
+  2: $grid-step * 2,
+  // 8
+  3: $grid-step * 3,
+  // 12
+  4: $grid-step * 4,
+  // 16
+  5: $grid-step * 5,
+  // 20
+  6: $grid-step * 6,
+  // 24
+  7: $grid-step * 7,
+  // 28
+  8: $grid-step * 8,
+  // 32
+  9: $grid-step * 9,
+  // 36
+  10: $grid-step * 10,
+  // 40
+  11: $grid-step * 11,
+  // 40
+  12: $grid-step * 12,
+  // 48
+  15: $grid-step * 15,
+  // 60
+  17: $grid-step * 17,
+  // 68
+  20: $grid-step * 20,
+  // 80
+  22: $grid-step * 22,
+  // 88
+  25: $grid-step * 25, // 100
+) !default;
+
+$grid-spacing-mobile: (
+  1: $grid-step,
+  // 4
+  2: $grid-step,
+  // 4
+  3: $grid-step * 2,
+  // 8
+  4: $grid-step * 3,
+  // 12
+  5: $grid-step * 4,
+  // 16
+  6: $grid-step * 5,
+  // 20
+  7: $grid-step * 6,
+  // 24
+  8: $grid-step * 7,
+  // 28
+  9: $grid-step * 8,
+  // 32
+  10: $grid-step * 9,
+  // 36
+  11: $grid-step * 10,
+  // 36
+  12: $grid-step * 10,
+  // 40
+  15: $grid-step * 12,
+  // 48
+  20: $grid-step * 15,
+  // 60
+  25: $grid-step * 20, // 80
+) !default;
+
+@mixin UiPadding($size, $side: null, $include-mobile: true) {
+  $property-name: padding;
+
+  @if ($side) {
+    $property-name: padding-#{$side};
+  }
+
+  #{$property-name}: map.get($grid-spacing, $size);
+
+  @if ($include-mobile) {
+    @include UiMediaMobile() {
+      #{$property-name}: map.get($grid-spacing-mobile, $size);
+    }
+  }
+}
+
+@mixin UiMargin($size, $side: null, $include-mobile: true) {
+  $property-name: margin;
+
+  @if ($side) {
+    $property-name: margin-#{$side};
+  }
+
+  #{$property-name}: map.get($grid-spacing, $size);
+
+  @if ($include-mobile) {
+    @include UiMediaMobile() {
+      #{$property-name}: map.get($grid-spacing-mobile, $size);
+    }
+  }
+}
+
+@mixin UiMarginNegative($size, $side: null, $include-mobile: true) {
+  $property-name: margin;
+
+  @if ($side) {
+    $property-name: margin-#{$side};
+  }
+
+  #{$property-name}: - map.get($grid-spacing, $size);
+
+  @if ($include-mobile) {
+    @include UiMediaMobile() {
+      #{$property-name}: - map.get($grid-spacing-mobile, $size);
+    }
+  }
+}
+
+@mixin UiGap($size, $include-mobile: true) {
+  $property-name: gap;
+
+  gap: map.get($grid-spacing, $size);
+
+  @if ($include-mobile) {
+    @include UiMediaMobile() {
+      gap: map.get($grid-spacing-mobile, $size);
+    }
+  }
+}
+
+@function UiGridSpacing($size) {
+  @return map.get($grid-spacing, $size);
+}
+
+@function UiGridSpacingMobile($size) {
+  @return map.get($grid-spacing-mobile, $size);
+}

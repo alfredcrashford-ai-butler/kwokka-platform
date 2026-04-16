@@ -1,0 +1,92 @@
+export default {
+  onboarding: {
+    close: 'Закрыть',
+    next: 'Далее',
+    finish: 'Закончить',
+  },
+  discordInvite: 'Присоединиться к сообществу в Discord',
+  construction: 'Ведутся работы...',
+  settings: 'Настройки',
+  uiKit: {
+    dialog: {
+      defaultPrimaryButtonText: 'Ок',
+      defaultSecondaryButtonText: 'Отмена',
+    },
+    expand: {
+      defaultOpenText: 'Показать информацию',
+      defaultCloseText: 'Скрыть информацию',
+    },
+  },
+  components: {
+    signOutButton: {
+      text: 'Выйти',
+      confirmation: 'Вы уверены, что хотите выйти?',
+    },
+    credentialsList: {
+      deletedSuccessfully: 'Учетные данные успешно удалены.',
+      verificationSentSuccessfully: 'Подтверждение успешно отправлено.',
+    },
+    credentialDialog: {
+      title: 'Учетные данные',
+      openAccountDetails: 'Информация об аккаунте',
+      sendVerification: 'Отправить подтверждение',
+      delete: 'Удалить',
+      confirmDeleteTitle: 'Вы уверены?',
+      confirmDeleteDescription:
+        'После удаления этих учетных данных аккаунт, связанный с ними, не сможет использовать их для входа в систему.',
+    },
+    itemCard: {
+      have: 'Владение',
+      haveTooltip: 'Этот предмет применяет особый эффект, когда он находится в вашем инвентаре.',
+      use: 'Использование',
+      useTooltip: 'Этот предмет можно использовать.',
+      rarity: {
+        junk: 'Мусор',
+        common: 'Обычный',
+        uncommon: 'Необычный',
+        rare: 'Редкий',
+        epic: 'Эпический',
+        legendary: 'Легендарный',
+        immortal: 'Бессмертный',
+      },
+    },
+    addEditGameDialog: {
+      addGame: 'Добавить игру',
+      editGame: 'Редактировать игру',
+      addEditGameKeyLabel: 'Ключ',
+      addEditGameKeyPlaceholder: 'Введите уникальный ключ игры',
+      applicationAccountLabel: 'ID аккаунта приложения',
+      applicationAccountPlaceholder: 'Введите ID аккаунта приложения',
+      tagsLabel: 'Теги',
+      tagsPlaceholder: 'Введите через запятую, например: tag1,tag2,tag3',
+      availableSinceLabel: 'Доступна с',
+      availableSincePlaceholder: 'С какого момента доступна',
+      availableTillLabel: 'Доступна до',
+      availableTillPlaceholder: 'До какого момента доступна',
+      delete: 'Удалить',
+      deleteConfirmTitle: 'Вы уверены?',
+      deleteConfirmDescription:
+        'Эта игра больше не будет доступна, все связанные лобби и игровые сессии также будут удалены.',
+    },
+    gameStats: {
+      activePlayers: 'Активно Игроков',
+      activeInstances: 'Активно Игр',
+      averagePlayers: 'Среднее количество игроков в игре',
+      totalPlayers: 'Всего Игроков',
+      averageDuration: 'Средняя Длительность игры',
+      startedInstances: 'Начато Игр',
+      finishedInstances: 'Закончено Игр',
+      abandonedInstances: 'Покинуто Игр',
+      totalInstances: 'Всего Игр',
+      from: 'С',
+      to: 'По',
+      now: 'Сейчас',
+    },
+  },
+  timeDiff: {
+    now: 'только что',
+    minutes: 'только что | 1 минуту назад | {n} минуты назад | {n} минут назад',
+    moreThanHour: 'более часа назад',
+  },
+  copied: 'Скопировано в буфер обмена!',
+};
