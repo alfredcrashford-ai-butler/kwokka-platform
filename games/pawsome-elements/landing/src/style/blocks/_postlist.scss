@@ -1,0 +1,50 @@
+.postlist {
+  display: flex;
+  flex-direction: column;
+  @include UiGap(20);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @include UiGap(10);
+
+    & li:not(:last-child) {
+      @include UiPadding(10, bottom);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    @include UiGap(5);
+  }
+
+  &__title {
+    @include UiTypographyLink();
+    @include UiTypographyHeading4();
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include UiGap(4);
+    background-color: UiColor(shade-800);
+    width: fit-content;
+    @include UiPadding(4, top);
+    @include UiPadding(4, bottom);
+    @include UiPadding(8, left);
+    @include UiPadding(8, right);
+    margin-left: auto;
+    margin-right: auto;
+    @include UiBorderRadius(2);
+    width: UiSpacing(100);
+    text-align: center;
+
+    & > * {
+      white-space: nowrap;
+      width: calc((100% - UiSpacing(8)) / 3);
+    }
+  }
+}

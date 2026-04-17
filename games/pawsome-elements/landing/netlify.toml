@@ -1,0 +1,15 @@
+[[redirects]]
+  from = "/*"
+  to = "/ru/:splat"
+  conditions = { Language = ["ru"] }
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/en/index.html"
+  status = 404

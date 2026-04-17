@@ -1,0 +1,21 @@
+---
+layout: layouts/second-level.njk
+title: Pawsome Elements | Новости | Блог
+pagination:
+  data: collections.blog_ru
+  size: 5
+  alias: blogposts
+  reverse: true
+---
+
+<h1>Блог</h1>
+
+{% set postlist = {
+  items: blogposts,
+  next: pagination.href.next,
+  previous: pagination.href.previous,
+  currentPage: pagination.pageNumber + 1,
+  totalPages: pagination.pages.length
+} %}
+{% include 'blocks/postlist.njk' %}
+{% include 'blocks/play-now.njk' %}

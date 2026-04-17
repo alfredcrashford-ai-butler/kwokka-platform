@@ -1,0 +1,20 @@
+export default {
+  play: 'Jouer',
+  practice: 'Entraînement',
+  shop: 'Boutique',
+  atlas: 'Atlas',
+  journal: 'Journal',
+  signOut: 'Déconnexion',
+  signOutConfirmation: 'Êtes-vous sûr de vouloir vous déconnecter ?',
+  signUp: {
+    button: 'Sauvegarder la progression',
+    description: 'Vous êtes connecté en tant qu’invité. Inscrivez-vous pour :',
+    saveProgress: 'Sauvegarder votre progression en toute sécurité',
+    shareProgress: 'Partager votre progression sur plusieurs appareils',
+    heading: 'Inscription',
+    success: 'Inscription réussie !',
+    alreadyHaveAccount: "J'ai déjà un compte",
+    or: 'OU',
+    createNewAccount: 'Créer un nouveau compte',
+  },
+};

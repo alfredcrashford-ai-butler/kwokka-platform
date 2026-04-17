@@ -1,0 +1,23 @@
+h1 {
+  @include UiTypographyHeading1();
+}
+
+h2 {
+  @include UiTypographyHeading2();
+}
+
+h3 {
+  @include UiTypographyHeading3();
+}
+
+h4 {
+  @include UiTypographyHeading4();
+}
+
+h5 {
+  @include UiTypographyHeading5();
+}
+
+h6 {
+  @include UiTypographyHeading6();
+}

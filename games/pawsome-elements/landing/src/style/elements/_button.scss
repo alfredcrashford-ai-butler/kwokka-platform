@@ -1,0 +1,107 @@
+.button {
+  @include UiButtonAppearance();
+  @include UiGap(2);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  > * {
+    @include UiTextOutline(2);
+  }
+
+  &[disabled], &:disabled, &[aria-disabled] {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  // SIZES
+
+  &_size-xs {
+    @include Ui9BoxWidth(10px);
+    @include Ui9BoxHeight(10px);
+    @include UiPadding(8, left);
+    @include UiPadding(8, right);
+    height: 40px;
+    @include UiTypographyHeading6();
+    @include UiTextShadow(1);
+  }
+
+  &_size-sm {
+    @include Ui9BoxWidth(14px);
+    @include Ui9BoxHeight(14px);
+    @include UiPadding(10, left);
+    @include UiPadding(10, right);
+    height: 60px;
+    min-width: 240px;
+    @include UiTypographyHeading4();
+    @include UiTextShadow(1);
+  }
+
+  &_size-md {
+    @include Ui9BoxWidth(26px);
+    @include Ui9BoxHeight(26px);
+    @include UiPadding(10, left);
+    @include UiPadding(10, right);
+    height: 90px;
+    min-width: 300px;
+    @include UiTypographyHeading3();
+    @include UiTextShadow(2);
+  }
+
+  // TYPES
+
+  &_type-primary {
+    @include Ui9BoxTopLeft('/public/ui/button/primary/button_primary_top_left.webp');
+    @include Ui9BoxTop('/public/ui/button/primary/button_primary_top.webp');
+    @include Ui9BoxTopRight('/public/ui/button/primary/button_primary_top_right.webp');
+    @include Ui9BoxLeft('/public/ui/button/primary/button_primary_left.webp');
+    @include Ui9BoxCenter('/public/ui/button/primary/button_primary_center.webp');
+    @include Ui9BoxRight('/public/ui/button/primary/button_primary_right.webp');
+    @include Ui9BoxBottomLeft('/public/ui/button/primary/button_primary_bottom_left.webp');
+    @include Ui9BoxBottom('/public/ui/button/primary/button_primary_bottom.webp');
+    @include Ui9BoxBottomRight('/public/ui/button/primary/button_primary_bottom_right.webp');
+  }
+
+  &_type-secondary {
+    @include Ui9BoxTopLeft('/public/ui/button/secondary/button_secondary_top_left.webp');
+    @include Ui9BoxTop('/public/ui/button/secondary/button_secondary_top.webp');
+    @include Ui9BoxTopRight('/public/ui/button/secondary/button_secondary_top_right.webp');
+    @include Ui9BoxLeft('/public/ui/button/secondary/button_secondary_left.webp');
+    @include Ui9BoxCenter('/public/ui/button/secondary/button_secondary_center.webp');
+    @include Ui9BoxRight('/public/ui/button/secondary/button_secondary_right.webp');
+    @include Ui9BoxBottomLeft('/public/ui/button/secondary/button_secondary_bottom_left.webp');
+    @include Ui9BoxBottom('/public/ui/button/secondary/button_secondary_bottom.webp');
+    @include Ui9BoxBottomRight('/public/ui/button/secondary/button_secondary_bottom_right.webp');
+  }
+
+  &_type-blue {
+    @include Ui9BoxTopLeft('/public/ui/button/blue/button_blue_top_left.webp');
+    @include Ui9BoxTop('/public/ui/button/blue/button_blue_top.webp');
+    @include Ui9BoxTopRight('/public/ui/button/blue/button_blue_top_right.webp');
+    @include Ui9BoxLeft('/public/ui/button/blue/button_blue_left.webp');
+    @include Ui9BoxCenter('/public/ui/button/blue/button_blue_center.webp');
+    @include Ui9BoxRight('/public/ui/button/blue/button_blue_right.webp');
+    @include Ui9BoxBottomLeft('/public/ui/button/blue/button_blue_bottom_left.webp');
+    @include Ui9BoxBottom('/public/ui/button/blue/button_blue_bottom.webp');
+    @include Ui9BoxBottomRight('/public/ui/button/blue/button_blue_bottom_right.webp');
+  }
+
+  &_type-link {
+    @include UiTypographyLink();
+
+    padding: 0;
+    height: fit-content;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:disabled {
+      text-decoration: none;
+    }
+  }
+}

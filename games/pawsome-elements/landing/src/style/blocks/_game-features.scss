@@ -1,0 +1,142 @@
+.game-features {
+  position: relative;
+  background-color: UiColor(shade-900);
+  overflow: hidden;
+
+  &__container {
+    @include UiPadding(45, top);
+    @include UiPadding(45, bottom);
+    @include UiContainer(420);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include UiMediaMaxWidth(sm) {
+      @include UiContainer($padding: 2);
+      @include UiPadding(15, top);
+      @include UiPadding(15, bottom);
+    }
+  }
+
+  &__heading {
+    @include UiTypographyHeading2();
+    @include UiTextShadow(4);
+    @include UiTextOutline(3);
+    text-align: center;
+    white-space: nowrap;
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiTypographyHeading3();
+      @include UiTextShadow(3);
+      @include UiTextOutline(2);
+    }
+  }
+
+  &__features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @include UiGap(15);
+    width: 100%;
+    @include UiMargin(15, top);
+    @include UiMargin(15, bottom);
+
+    @include UiMediaMaxWidth(lg) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      @include UiGap(10);
+    }
+
+    @include UiMediaMaxWidth(sm) {
+      grid-template-columns: 1fr;
+      width: fit-content;
+      @include UiGap(5);
+      @include UiMargin(10, top);
+      @include UiMargin(10, bottom);
+    }
+  }
+
+  &__feature {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: UiSpacing(2) UiSpacing(2) 0 0;
+    height: UiSpacing(110);
+    background-image: linear-gradient(UiColor(shade-100, 0.4), UiColor(shade-100, 0));
+
+    @include UiMediaMinWidth(lg) {
+      &:nth-child(2),
+      &:nth-child(3) {
+        @include UiMargin(15, top);
+      }
+    }
+
+    @include UiMediaMaxWidth(lg) {
+      background-image: linear-gradient(UiColor(shade-100, 0.8), UiColor(shade-100, 0));
+      margin: 0;
+    }
+
+    @include UiMediaMaxWidth(sm) {
+      max-width: UiSpacing(80);
+      height: UiSpacing(80);
+      @include UiPadding(3, bottom);
+    }
+  }
+
+  &__feature-image-container {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+
+  &__feature-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    @include UiBorderRadius(3);
+    background-color: UiColor(shade-900);
+  }
+
+  &__feature-image-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    border-style: solid;
+    border-image-source: url('/public/ui/frame_2.webp');
+    border-image-slice: 45;
+    border-width: UiSpacing(4);
+    image-rendering: pixelated;
+  }
+
+  &__feature-name {
+    @include UiMargin(3, top);
+    @include UiTypographyHeading4();
+    @include UiTextShadow(3);
+    @include UiTextOutline(2);
+    @include UiPadding(1, left);
+    @include UiPadding(1, right);
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiTypographyHeading5();
+      @include UiTextShadow(2);
+      @include UiTextOutline(2);
+    }
+  }
+
+  &__feature-caption {
+    @include UiMargin(1, top);
+    @include UiTextShadow(2);
+    @include UiTypographyHeading6();
+    @include UiPadding(1, left);
+    @include UiPadding(1, right);
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiTypographyParagraph1();
+      @include UiTextShadow(1);
+    }
+  }
+}

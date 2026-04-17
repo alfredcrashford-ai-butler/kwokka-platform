@@ -1,0 +1,6 @@
+name: pawsome-elements-backend
+include:
+  - services/pwsm-eu-central-1.yaml
+  - services/nginx.yaml
+volumes:
+  shared_volume:

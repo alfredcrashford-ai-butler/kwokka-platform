@@ -1,0 +1,145 @@
+.story {
+  position: relative;
+  background-image: url('/public/blocks/story/bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  &__container {
+    @include UiPadding(45, top);
+    @include UiPadding(45, bottom);
+    @include UiContainer();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include UiMediaMaxWidth(sm) {
+      @include UiContainer($padding: 2);
+      @include UiPadding(15, top);
+      @include UiPadding(30, bottom);
+    }
+  }
+
+  &__card {
+    position: relative;
+    width: 100%;
+  }
+
+  &__card-inner {
+    position: relative;
+    @include UiPadding(3, bottom);
+    @include UiPadding(1.5, left);
+    @include UiPadding(1.5, right);
+    @include UiPadding(1.5, top);
+  }
+
+  &__card-texture {
+    position: absolute;
+    width: calc(100% - UiSpacing(3));
+    height: calc(100% - UiSpacing(4.5));
+    background-image: url('/public/blocks/story/texture.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    @include UiGap(10);
+    @include UiPadding(10);
+    display: flex;
+    align-items: center;
+
+    > * {
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 0;
+    }
+
+    @include UiMediaLandscape() {
+      aspect-ratio: 16 / 9;
+    }
+
+    @include UiMediaPortrait() {
+      flex-direction: column;
+    }
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiGap(2);
+      @include UiPadding(5);
+    }
+  }
+
+  &__heading-panel {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-25%);
+    z-index: 1;
+    width: 110%;
+    @include UiMediaMaxWidth(sm) {
+      @include UiPadding(7, top);
+      @include Ui9BoxWidth(UiSpacing(20));
+      height: UiSpacing(52);
+    }
+  }
+
+  &__heading {
+    @include UiTypographyHeading2();
+    @include UiTextShadow(4);
+    @include UiTextOutline(3);
+    white-space: nowrap;
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiTypographyHeading3();
+      @include UiTextShadow(3);
+      @include UiTextOutline(2);
+    }
+  }
+
+  &__img-container {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    position: relative;
+    @include UiDropShadow(1);
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    @include UiBorderRadius(3);
+    background-color: UiColor(shade-900);
+    image-rendering: auto;
+  }
+
+  &__img-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    border-style: solid;
+    border-image-source: url('/public/ui/frame_2.webp');
+    border-image-slice: 45;
+    border-width: UiSpacing(4);
+    image-rendering: pixelated;
+  }
+
+  &__paragraph {
+    @include UiTextShadow(2);
+    line-height: 1.5;
+    text-align: justify;
+
+    &::first-letter {
+      @include UiTypographyHeading4();
+      line-height: 1.5;
+    }
+  }
+}

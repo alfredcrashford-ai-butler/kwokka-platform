@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ dir }}" class="cc--darkmode">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    {# seo #}
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ 'description' | i18n }}"/>
+    <meta name="keywords" content="multiplayer,games,browser games,party,fun,kwokka,pawsome elements,pawsome,elements,gaming,browser games,browser,html games,web game, web games,card game,cards,dogs,mages,dog mage"/>
+    <meta name="robots" content="index, follow, archive"/>
+    <meta property="og:url" content="https://pawsome-elements.com"/>
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:description" content="{{ 'description' | i18n }}"/>
+    <meta property="og:image" content="https://pawsome-elements.com/public/logo_horizontal.webp"/>
+
+    {# favicons #}
+    <link rel="icon" type="image/png" href="/public/icons/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/public/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/icons/apple-touch-icon.png" />
+
+    {# stylesheet #}
+    <link rel="stylesheet" type="text/css" href="/style/index.css"/>
+
+    {# meta #}
+    <meta name="application-name" content="{{ title }}"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="theme-color" content="#3a260c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="{{ title }}">
+    <meta name="msapplication-TileColor" content="#3a260c">
+
+    {# third-party #}
+    <link rel="stylesheet" href="/style/cookie-consent.css" />
+    <script defer src="/public/script/alpinejs@3.14.8.cdn.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    {% include 'blocks/consent.njk' %}
+
+    {% include 'blocks/svg-definitions.njk' %}
+
+    {{ content | safe }}
+  </body>
+</html>

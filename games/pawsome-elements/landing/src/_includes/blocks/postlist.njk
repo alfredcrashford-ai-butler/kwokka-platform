@@ -1,0 +1,29 @@
+<div class="postlist">
+  <ul class="postlist__list">
+    {%- for post in postlist.items %}
+      <li class="postlist__item">
+        <a href="{{ post.url }}" class="postlist__link link-reset">
+          <span class="postlist__title">{{ post.data.pageTitle }}</span>
+          <time class="postlist__date" datetime="{{ post.date }}">{{ post.date | date('yyyy-MM-dd') }}</time>
+        </a>
+      </li>
+    {%- endfor %}
+  </ul>
+  <div class="postlist__controls">
+    <a
+      class="link-reset button button_type-secondary button_size-xs nine-box"
+      href="{{postlist.previous}}"
+      {% if not postlist.previous %}disabled aria-disabled tabindex="-1"{% endif %}
+    >
+      <span>{{ 'previous' | i18n }}</span>
+    </a>
+    <span>{{ 'page' | i18n }}: {{ postlist.currentPage }} / {{ postlist.totalPages }} </span>
+    <a
+      class="link-reset button button_type-secondary button_size-xs nine-box"
+      href="{{postlist.next}}"
+      {% if not postlist.next %}disabled aria-disabled tabindex="-1"{% endif %}
+    >
+      <span>{{ 'next' | i18n }}</span>
+    </a>
+  </div>
+</div>

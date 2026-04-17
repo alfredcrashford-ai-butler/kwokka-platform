@@ -1,0 +1,20 @@
+export default {
+  play: 'Играть',
+  practice: 'Тренировка',
+  shop: 'Магазин',
+  atlas: 'Атлас',
+  journal: 'Журнал',
+  signOut: 'Выйти из игры',
+  signOutConfirmation: 'Вы уверены, что хотите выйти из игры?',
+  signUp: {
+    button: 'Сохранить прогресс',
+    description: 'Вы вошли как гость. Зарегистрируйтесь, чтобы:',
+    saveProgress: 'Надежно сохранить свой прогресс',
+    shareProgress: 'Синхронизировать прогресс на всех устройствах',
+    heading: 'Регистрация',
+    success: 'Регистрация прошла успешно!',
+    alreadyHaveAccount: 'Уже есть аккаунт',
+    or: 'ИЛИ',
+    createNewAccount: 'Создать новый аккаунт',
+  },
+};

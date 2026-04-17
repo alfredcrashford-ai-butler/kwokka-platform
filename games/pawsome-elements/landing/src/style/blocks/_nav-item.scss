@@ -1,0 +1,70 @@
+.nav-item {
+  position: relative;
+
+  &__button {
+    @include UiButtonAppearance();
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include UiGap(2);
+    width: 100%;
+
+    @include UiPadding(4, left);
+    @include UiPadding(4, right);
+    @include UiPadding(1, top);
+    @include UiPadding(1, bottom);
+    @include UiBorderRadius(2);
+    @include UiTypographyHeading4();
+
+    &:focus-visible,
+    &:hover,
+    &_opened {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__icon {
+    @include UiMargin(1, top);
+    width: UiSpacing(4);
+    height: UiSpacing(4);
+  }
+
+  &__dropdown {
+    @include UiPadding(3);
+    @include UiBoxShadow(2);
+    @include UiBorderRadius(2);
+    background-color: UiColor(shade-800);
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + UiSpacing(1));
+    display: flex;
+    flex-direction: column;
+    @include UiGap(1);
+    min-width: UiSpacing(60);
+  }
+
+  &__link {
+    @include UiButtonAppearance();
+    @include UiPadding(4, left);
+    @include UiPadding(4, right);
+    @include UiPadding(1, top);
+    @include UiPadding(1, bottom);
+    @include UiBorderRadius(1);
+    @include UiTypographyHeading4();
+
+    &:focus-visible,
+    &:hover,
+    &_opened {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}

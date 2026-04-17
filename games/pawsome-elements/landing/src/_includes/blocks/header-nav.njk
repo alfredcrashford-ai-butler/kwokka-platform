@@ -1,0 +1,52 @@
+{# Game #}
+{% set navItem = {
+  buttonLabel: "nav.game" | i18n,
+  buttonId: "nav-game-button",
+  items: [
+        { label: "nav.gameplay" | i18n, url: "/" + locale + "/" + links.game.gameplay },
+        { label: "nav.cards" | i18n, url: "/" + locale + "/" + links.game.cards },
+        { label: "nav.spells" | i18n, url: "/" + locale + "/" + links.game.spells },
+        { label: "nav.ranked" | i18n, url: "/" + locale + "/" + links.game.ranked },
+        { label: "nav.essence" | i18n, url: "/" + locale + "/" + links.game.essence },
+        { label: "nav.story" | i18n, url: "/" + locale + "/" + links.game.story },
+        { label: "nav.beginnersGuide" | i18n, url: "/" + locale + "/" + links.game.beginnersGuide },
+        { label: "nav.strategy" | i18n, url: "/" + locale + "/" + links.game.strategy },
+        { label: "nav.faq" | i18n, url: "/" + locale + "/" + links.game.faq }
+      ]
+} %}
+{% include "blocks/nav-item.njk" %}
+
+{# News #}
+{% set navItem = {
+  buttonLabel: "nav.news" | i18n,
+  buttonId: "nav-news-button",
+  items: [
+        { label: "nav.blog" | i18n, url: "/" + locale + "/" + links.news.blog },
+        { label: "nav.releases" | i18n, url: "/" + locale + "/" + links.news.releases }
+      ]
+} %}
+{% include "blocks/nav-item.njk" %}
+
+{# Community #}
+{% set navItem = {
+  buttonLabel: "nav.community" | i18n,
+  buttonId: "nav-community-button",
+  items: [
+        { label: "nav.leaderboard" | i18n, url: "/" + locale + "/" + links.community.leaderboard },
+        { label: "nav.socials" | i18n, url: "/" + locale + "/" + links.community.socials }
+      ]
+} %}
+{% include "blocks/nav-item.njk" %}
+
+{# About #}
+{% set navItem = {
+  buttonLabel: "nav.about" | i18n,
+  buttonId: "nav-about-button",
+  items: [
+        { label: "nav.about" | i18n, url: "/" + locale + "/" + links.about },
+        { label: "nav.contact" | i18n, url: "/" + locale + "/" + links.contact },
+        { label: "nav.legalNotice" | i18n, url: "/" + locale + "/" + links.legalNotice },
+        { label: "nav.privacyPolicy" | i18n, url: "/" + locale + "/" + links.privacyPolicy }
+      ]
+} %}
+{% include "blocks/nav-item.njk" %}

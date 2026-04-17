@@ -1,0 +1,17 @@
+$drop-shadow-1: 0 2px 8px UiColor(shade-900, 0.65);
+$drop-shadow-2: 0 4px 14px UiColor(shade-900, 0.65);
+$drop-shadow-3: 0 6px 20px UiColor(shade-900, 0.75);
+$drop-shadow-4: 0 8px 28px UiColor(shade-900, 0.85);
+$drop-shadow-5: 0 12px 40px UiColor(shade-900, 0.95);
+
+$drop-shadows: (
+  1: $drop-shadow-1,
+  2: $drop-shadow-2,
+  3: $drop-shadow-3,
+  4: $drop-shadow-4,
+  5: $drop-shadow-5,
+) !default;
+
+@mixin UiDropShadow($name) {
+  filter: drop-shadow(map.get($drop-shadows, $name));
+}

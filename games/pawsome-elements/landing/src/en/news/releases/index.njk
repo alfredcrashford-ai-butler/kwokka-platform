@@ -1,0 +1,21 @@
+---
+layout: layouts/second-level.njk
+title: Pawsome Elements | News | Releases
+pagination:
+  data: collections.release_en
+  size: 5
+  alias: releases
+  reverse: true
+---
+
+<h1>Releases</h1>
+
+{% set postlist = {
+  items: releases,
+  next: pagination.href.next,
+  previous: pagination.href.previous,
+  currentPage: pagination.pageNumber + 1,
+  totalPages: pagination.pages.length
+} %}
+{% include 'blocks/postlist.njk' %}
+{% include 'blocks/play-now.njk' %}

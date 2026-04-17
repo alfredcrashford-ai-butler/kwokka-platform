@@ -1,0 +1,17 @@
+---
+layout: layouts/second-level.njk
+---
+
+<main class="post-layout">
+  <h1>{{ pageTitle }}</h1>
+  <div class="contentful post-layout__content">
+    {{ content | safe }}
+  </div>
+  {% if showDate and date %}
+    <time class="post-layout__date">
+      {{ date | date("yyyy-MM-dd") }}
+    </time>
+  {% endif %}
+  {% include 'blocks/play-now.njk' %}
+  <div></div>
+</main>

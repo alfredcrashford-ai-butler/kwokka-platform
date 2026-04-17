@@ -1,0 +1,11 @@
+.icon {
+  $size: UiSpacing(6);
+  width: $size;
+  height: $size;
+
+  &_sm {
+    $size: UiSpacing(5);
+    width: $size;
+    height: $size;
+  }
+}

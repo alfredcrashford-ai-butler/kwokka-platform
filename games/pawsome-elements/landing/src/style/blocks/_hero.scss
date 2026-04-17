@@ -1,0 +1,232 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('/public/blocks/hero/hero.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow: hidden;
+  @include UiPadding(22, bottom);
+
+  &__container {
+    @include UiContainer();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include UiPadding(12, top);
+    @include UiMediaMaxWidth(sm) {
+      @include UiContainer($padding: 2);
+    }
+  }
+
+  &__logo-image {
+    aspect-ratio: 2 / 1;
+    max-height: UiSpacing(80);
+    width: 100%;
+    object-fit: contain;
+    animation: HeroFadeIn 0.3s ease;
+  }
+
+  &__heading {
+    @include UiTypographyHeading1();
+    text-align: center;
+    @include UiMargin(5, bottom);
+    @include UiTextOutline(4);
+    @include UiTextShadow(5);
+
+    animation: HeroFadeIn 0.3s ease 0.15s both;
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiTypographyHeading3();
+      @include UiTextOutline(3);
+      @include UiTextShadow(2);
+    }
+  }
+
+  &__caption {
+    @include UiMargin(10, bottom);
+    @include UiTypographyHeading5();
+    @include UiGap(5);
+    @include UiTextOutline(2);
+    @include UiTextShadow(2);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    animation: HeroFadeIn 0.3s ease 0.3s both;
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiMargin(20, bottom);
+      @include UiGap(1);
+      @include UiTypographyParagraph3();
+      @include UiTextOutline(1);
+      @include UiTextShadow(1);
+    }
+  }
+
+  &__card {
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-duration: 1s, 10s;
+    animation-composition: add;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+
+    @include UiMediaMaxWidth(sm) {
+      display: none;
+    }
+
+    @include UiMediaPortrait() {
+      display: none;
+    }
+
+    &_left-1 {
+      aspect-ratio: 364 / 508;
+      height: 55%;
+      background-image: url('/public/blocks/hero/card_left_1.webp');
+      top: -5%;
+      left: -2%;
+      animation-name: HeroCardSlideInLeft, HeroCardFloat;
+      animation-delay:
+        0.9s,
+        -2s;
+    }
+
+    &_left-2 {
+      aspect-ratio: 321 / 479;
+      height: 60%;
+      background-image: url('/public/blocks/hero/card_left_2.webp');
+      top: 28%;
+      left: -4%;
+      animation-name: HeroCardSlideInLeft, HeroCardFloat;
+      animation-delay:
+        1.5s,
+        -4s;
+    }
+
+    &_left-3 {
+      aspect-ratio: 290 / 400;
+      height: 50%;
+      background-image: url('/public/blocks/hero/card_left_3.webp');
+      top: 50%;
+      left: 5%;
+      animation-name: HeroCardSlideInLeft, HeroCardFloat;
+      animation-delay:
+        0.3s,
+        -6s;
+    }
+
+    &_right-1 {
+      aspect-ratio: 424 / 576;
+      height: 60%;
+      background-image: url('/public/blocks/hero/card_right_1.webp');
+      top: -5%;
+      right: -5%;
+      animation-name: HeroCardSlideInRight, HeroCardFloat;
+      animation-delay:
+        0.6s,
+        -6s;
+    }
+
+    &_right-2 {
+      aspect-ratio: 361 / 531;
+      height: 55%;
+      background-image: url('/public/blocks/hero/card_right_2.webp');
+      top: 29%;
+      right: -2%;
+      animation-name: HeroCardSlideInRight, HeroCardFloat;
+      animation-delay:
+        1.8s,
+        -8s;
+    }
+
+    &_right-3 {
+      aspect-ratio: 269 / 362;
+      height: 45%;
+      background-image: url('/public/blocks/hero/card_right_3.webp');
+      top: 54%;
+      right: 8%;
+      animation-name: HeroCardSlideInRight, HeroCardFloat;
+      animation-delay:
+        1.2s,
+        -10s;
+    }
+  }
+
+  &__button {
+    animation: HeroFadeIn 0.3s ease 0.45s both;
+  }
+
+  &__scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background-image: url('/public/caret-down-fill.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: UiSpacing(10);
+    height: UiSpacing(10);
+    color: UiColor(shade-100);
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    animation-fill-mode: both;
+    opacity: 0.75;
+
+    @include UiInlineAnimation(2s) {
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(calc(-1 * UiSpacing(10)));
+      }
+      50% {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+  }
+}
+
+@keyframes HeroCardSlideInLeft {
+  from {
+    transform: translateX(-200%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes HeroCardSlideInRight {
+  from {
+    transform: translateX(200%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes HeroCardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+}
+
+@keyframes HeroFadeIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

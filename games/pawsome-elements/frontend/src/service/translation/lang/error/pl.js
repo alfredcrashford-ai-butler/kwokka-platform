@@ -1,0 +1,32 @@
+export default {
+  NETWORK_ERROR:
+    'Nie można nawiązać połączenia z naszymi serwerami. Sprawdź swoje połączenie internetowe i spróbuj ponownie.',
+  UNEXPECTED_ERROR: 'Wystąpił nieoczekiwany błąd. Nasi programiści już pracują nad jego naprawą.',
+  VALIDATION_ERROR: 'Nieprawidłowe żądanie.',
+  UNAUTHORIZED: 'Błąd autoryzacji. Spróbuj ponownie lub odśwież grę.',
+  EMAIL_INVALID: 'Podany adres e-mail jest nieprawidłowy.',
+  PASSWORD_INVALID: 'Podane hasło jest nieprawidłowe.',
+  REFRESH_TOKEN_INVALID: 'Błąd autoryzacji. Spróbuj ponownie lub odśwież grę.',
+  CREDENTIAL_INVALID:
+    'Nie znaleziono konta. Spróbuj użyć innych danych logowania lub skontaktuj się z naszym wsparciem.',
+  RESTORE_INACTIVE_ACCOUNT_CREDENTIAL_NOT_POSSIBLE: 'Nie można przywrócić poświadczenia dla nieaktywnego konta.',
+  RESTORE_TOKEN_INVALID: 'Token przywracania jest nieprawidłowy.',
+  SIGN_IN_TO_INACTIVE_ACCOUNT_NOT_POSSIBLE: 'Logowanie do nieaktywnego konta jest niemożliwe.',
+  GAME_BELONGS_TO_OTHER_PLAYER: 'Ta gra należy do innego gracza i nie możesz do niej dołączyć.',
+  VERIFY_TOKEN_INVALID: 'Token weryfikacyjny jest nieprawidłowy.',
+  CAPTCHA_INVALID: 'Podany CAPTCHA jest nieprawidłowy.',
+  ENTITY_NOT_FOUND: 'Żądany element nie został znaleziony.',
+  CAPTCHA_ERROR: 'Nie udało się zweryfikować CAPTCHA.',
+  OAUTH_FAILED_ERROR: 'Autoryzacja za pomocą usługi zewnętrznej nie powiodła się. Spróbuj ponownie.',
+  OAUTH_POPUP_CLOSED: 'Okno autoryzacji zostało zamknięte. Spróbuj ponownie.',
+  FAILED_TO_LOAD_GOOGLE_USER_INFO: 'Coś poszło nie tak podczas autoryzacji przez Google. Spróbuj ponownie.',
+  PROFILE_NAME_IS_ALREADY_TAKEN: 'Ten nick jest już zajęty. Wybierz inny.',
+  CREDENTIAL_IDENTIFIER_ALREADY_USED:
+    'Wybrane poświadczenie jest już używane przez inne konto. Użyj go do zalogowania lub wybierz inne poświadczenie.',
+  forbidden: 'Akcja zabroniona.',
+  player_is_not_host: 'Musisz być gospodarzem, aby wykonać tę akcję.',
+  player_is_not_in_game: 'Nie jesteś w grze i nie możesz do niej dołączyć.',
+  lobby_not_found: 'Nie znaleziono lobby.',
+  too_many_players: 'Zbyt wielu graczy jest podłączonych do gry.',
+  forbidden_game_status: 'Status gry uniemożliwia wykonanie tej akcji.',
+};

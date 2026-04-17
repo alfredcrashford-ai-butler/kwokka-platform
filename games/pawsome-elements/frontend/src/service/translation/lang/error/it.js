@@ -1,0 +1,32 @@
+export default {
+  NETWORK_ERROR:
+    'Impossibile stabilire la connessione con i nostri server. Controlla la tua connessione internet e riprova.',
+  UNEXPECTED_ERROR: 'Si è verificato un errore imprevisto. I nostri sviluppatori stanno già lavorando per risolverlo.',
+  VALIDATION_ERROR: 'Richiesta non valida.',
+  UNAUTHORIZED: 'Errore di autorizzazione. Riprova o ricarica il gioco.',
+  EMAIL_INVALID: "L'indirizzo email fornito non è valido.",
+  PASSWORD_INVALID: 'La password fornita non è valida.',
+  REFRESH_TOKEN_INVALID: 'Errore di autorizzazione. Riprova o ricarica il gioco.',
+  CREDENTIAL_INVALID: 'Account non trovato. Prova con altre credenziali o contatta il nostro supporto.',
+  RESTORE_INACTIVE_ACCOUNT_CREDENTIAL_NOT_POSSIBLE:
+    'Non è possibile ripristinare una credenziale per un account inattivo.',
+  RESTORE_TOKEN_INVALID: 'Il token di ripristino non è valido.',
+  SIGN_IN_TO_INACTIVE_ACCOUNT_NOT_POSSIBLE: "Non è possibile effettuare l'accesso a un account inattivo.",
+  GAME_BELONGS_TO_OTHER_PLAYER: 'Questa partita appartiene a un altro giocatore e non puoi unirti.',
+  VERIFY_TOKEN_INVALID: 'Il token di verifica non è valido.',
+  CAPTCHA_INVALID: 'Il CAPTCHA fornito non è valido.',
+  ENTITY_NOT_FOUND: "L'entità richiesta non è stata trovata.",
+  CAPTCHA_ERROR: 'Verifica del CAPTCHA fallita.',
+  OAUTH_FAILED_ERROR: 'Autorizzazione tramite servizio di terze parti fallita. Riprova.',
+  OAUTH_POPUP_CLOSED: 'La finestra di autorizzazione è stata chiusa. Riprova.',
+  FAILED_TO_LOAD_GOOGLE_USER_INFO: "Si è verificato un errore durante l'autorizzazione con Google. Riprova.",
+  PROFILE_NAME_IS_ALREADY_TAKEN: 'Questo nickname è già in uso. Prova con un altro.',
+  CREDENTIAL_IDENTIFIER_ALREADY_USED:
+    "La credenziale selezionata è già utilizzata da un altro account. Usala per accedere o scegli un'altra credenziale.",
+  forbidden: 'Azione vietata.',
+  player_is_not_host: "Devi essere l'host per eseguire questa azione.",
+  player_is_not_in_game: 'Non sei nella partita e non puoi unirti.',
+  lobby_not_found: 'Lobby non trovata.',
+  too_many_players: 'Troppi giocatori connessi alla partita.',
+  forbidden_game_status: 'Lo stato della partita impedisce questa azione.',
+};

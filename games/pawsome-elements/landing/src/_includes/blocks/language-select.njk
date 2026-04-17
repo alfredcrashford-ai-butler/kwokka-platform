@@ -1,0 +1,8 @@
+<div class="language-select" x-data="{ locale: '{{ locale }}' }">
+  <img class="language-select__icon" src="/public/language.svg" alt="" loading="lazy"/>
+  <select class="language-select__select" value="{{ locale }}" x-model="locale" @change="window.location.href = location.origin + '/' + locale + location.pathname.replace(/^\/[^\/]+/, '')">
+    {% for lc in locales -%}
+      <option value="{{ lc.code }}">{{ lc.label }}</option>
+    {% endfor -%}
+  </select>
+</div>

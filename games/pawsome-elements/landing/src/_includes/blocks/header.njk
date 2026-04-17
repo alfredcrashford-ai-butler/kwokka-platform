@@ -1,0 +1,30 @@
+<header class="header" id="pwsm-header">
+  <div class="header__container">
+    <nav class="header__nav hide_max-width-md">
+      <a class="header__logo-link" href="/{{ locale }}">
+        <img class="header__logo-image" src="/public/logo_square.webp" alt="Pawsome Elements"/>
+      </a>
+      {% include "blocks/header-nav.njk" %}
+      <div class="header__right">
+        <a class="link-reset button button_type-blue button_size-xs nine-box" href="{{ links.app }}">
+          <span>{{ 'playNow' | i18n }}</span>
+        </a>
+      </div>
+    </nav>
+    <nav class="header__nav hide_min-width-md">
+      <div class="header__left">
+        {% include "blocks/sidenav.njk" %}
+      </div>
+
+      <a class="header__logo-link header__center" href="/{{ locale }}">
+        <img class="header__logo-image" src="/public/logo_square.webp" alt="Pawsome Elements"/>
+      </a>
+
+      <div class="header__right">
+        <a class="link-reset button button_type-blue button_size-xs nine-box" href="{{ links.app }}">
+          <span>{{ 'play' | i18n }}</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>

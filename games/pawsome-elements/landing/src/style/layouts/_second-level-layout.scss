@@ -1,0 +1,16 @@
+.second-level-layout {
+  min-height: 100%;
+
+  h1 {
+    @include UiTypographyHeading1();
+    @include UiMargin(10, bottom);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  &__content {
+    @include UiPadding(15, top);
+    @include UiContainer(300);
+  }
+}

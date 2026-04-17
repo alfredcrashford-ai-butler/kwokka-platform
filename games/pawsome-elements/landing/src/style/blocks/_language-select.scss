@@ -1,0 +1,22 @@
+.language-select {
+  position: relative;
+
+  &__select {
+    @include UiButtonAppearance();
+    background-color: UiColor(shade-100, 0.1);
+    @include UiBorderRadius(3);
+    height: UiSpacing(12);
+    @include UiPadding(14, left);
+    @include UiPadding(4, right);
+    appearance: none;
+  }
+
+  &__icon {
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: UiSpacing(4);
+    width: UiSpacing(7);
+    transform: translateY(-50%);
+  }
+}

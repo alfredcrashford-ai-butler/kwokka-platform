@@ -1,0 +1,25 @@
+<div class="nav-item" x-data="{ open: false }" @keydown.escape="open = false" @click.outside="open = false">
+  <button
+    class="nav-item__button"
+    @click="open = !open"
+    :class="{ 'nav-item__button_opened': open }"
+    :aria-expanded="open"
+    aria-haspopup="true"
+    id="{{ navItem.buttonId }}"
+  >
+    <span>{{ navItem.buttonLabel }}</span>
+    <img class="nav-item__icon" src="/public/caret-down-fill.svg" alt="" />
+  </button>
+  <div
+    class="nav-item__dropdown"
+    x-show="open"
+    x-cloak
+    x-transition
+    aria-labelledby="{{ navItem.buttonId }}"
+    role="menu"
+  >
+    {% for item in navItem.items %}
+      <a class="link-reset nav-item__link" role="menuitem" href="{{ item.url }}">{{ item.label }}</a>
+    {% endfor %}
+  </div>
+</div>

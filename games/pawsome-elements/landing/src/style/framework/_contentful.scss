@@ -1,0 +1,84 @@
+.contentful {
+  > * {
+    @include UiMargin(2, bottom);
+  }
+
+  h1:not(:first-child),
+  h2:not(:first-child),
+  h3:not(:first-child),
+  h4:not(:first-child),
+  h5:not(:first-child),
+  h6:not(:first-child) {
+    @include UiMargin(10, top);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  h1 {
+    @include UiTypographyHeading1();
+  }
+
+  h2 {
+    @include UiTypographyHeading2();
+  }
+
+  h3 {
+    @include UiTypographyHeading3();
+  }
+
+  h4 {
+    @include UiTypographyHeading4();
+  }
+
+  h5 {
+    @include UiTypographyHeading5();
+  }
+
+  h6 {
+    @include UiTypographyHeading6();
+  }
+
+  ul {
+    list-style: disc;
+    @include UiPadding(8, left);
+  }
+
+  ol {
+    list-style: decimal;
+    @include UiPadding(8, left);
+  }
+
+  :not(h1, h2, h3, h4, h5, h6) {
+    font-family: system-ui, sans-serif;
+  }
+
+  b,
+  strong {
+    font-weight: 900;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  blockquote {
+    font-style: italic;
+    @include UiPadding(4, left);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  img {
+    max-width: 100%;
+    @include UiBorderRadius(1);
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,149 @@
+.footer {
+  background-color: UiColor(shade-900);
+  overflow: hidden;
+  @include UiPadding(15, top);
+
+  &__socials {
+    width: 100%;
+    background-color: #7c5d24;
+    height: UiSpacing(45);
+    display: flex;
+    flex-direction: column;
+    @include UiBoxShadow(4);
+  }
+
+  &__socials-heading {
+    @include UiTypographyHeading5();
+    @include UiTextShadow(1);
+    @include UiTextOutline(2);
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiTypographyHeading6();
+      @include UiTextShadow(1);
+      @include UiTextOutline(1);
+    }
+  }
+
+  &__socials-border {
+    width: 100%;
+    height: UiSpacing(5);
+    background-size: 100% 100%;
+    flex-shrink: 0;
+
+    &_top {
+      background-image: url('/public/ui/option_panel/option_panel_top.webp');
+    }
+
+    &_bottom {
+      background-image: url('/public/ui/option_panel/option_panel_bottom.webp');
+    }
+  }
+
+  &__socials-texture {
+    background-image: url('/public/blocks/footer/texture.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 100px;
+    z-index: 1;
+    flex-grow: 1;
+
+    @include UiMediaMaxWidth(sm) {
+      display: none;
+    }
+
+    &_left {
+      background-position: 100%;
+    }
+
+    &_right {
+      background-position: 100%;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__socials-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    @include UiGap(10);
+  }
+
+  &__socials-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    @include UiGap(6);
+    @include UiMediaMaxWidth(sm) {
+      width: 100%;
+      @include UiGap(4);
+    }
+  }
+
+  &__socials-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include UiGap(10);
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiGap(4);
+    }
+  }
+
+  &__socials-link {
+    @include UiButtonAppearance();
+    width: UiSpacing(10);
+    height: UiSpacing(10);
+    display: block;
+    @include UiMediaMaxWidth(sm) {
+      width: UiSpacing(8);
+      height: UiSpacing(8);
+    }
+  }
+
+  &__socials-link-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__container {
+    @include UiContainer($size: 280);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    @include UiPadding(15, top);
+    @include UiPadding(15, bottom);
+
+    @include UiMediaMaxWidth(md) {
+      grid-template-columns: 1fr;
+      @include UiGap(8);
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include UiGap(2);
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    @include UiGap(2);
+
+    @include UiMediaMaxWidth(md) {
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.sidenav {
+  &__container {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &__backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  &__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    @include UiGap(2);
+  }
+
+  &__footer {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include UiGap(4);
+  }
+
+  &__content {
+    position: relative;
+    height: 100%;
+    min-width: UiSpacing(80);
+    width: 50%;
+    background-color: UiColor(shade-900);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    @include UiPadding(2);
+    @include UiGap(10);
+
+    @include UiInlineAnimation(500ms) {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    & > .nav-item {
+      width: 100%;
+    }
+  }
+
+  &__toggle {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include UiButtonAppearance();
+    @include UiPadding(1);
+    @include UiBorderRadius(2);
+    width: UiSpacing(10);
+
+    &:focus-visible,
+    &:hover,
+    &_opened {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    aspect-ratio: 2;
+  }
+}

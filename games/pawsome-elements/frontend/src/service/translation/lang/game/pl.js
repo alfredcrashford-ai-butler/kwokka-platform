@@ -1,0 +1,95 @@
+export default {
+  roomPreparation: {
+    emptySlot: 'Wolne miejsce',
+    hostPrivateLabel: 'Prywatna lobby?',
+    visibility: 'Widoczność lobby',
+    public: 'Publiczne',
+    private: 'Prywatne',
+    hostTooltip: 'Gra może się rozpocząć, gdy dołączy co najmniej {n} graczy.',
+    guestTooltip: 'Tylko gospodarz może rozpocząć grę.',
+    hostSubmit: 'Rozpocznij grę',
+    guestSubmit: 'Czekam na gospodarza...',
+    copy: 'Kopiuj link',
+    invitationLinkLabel: 'Link zaproszenia',
+    invitationLinkCaption: 'Użyj poniższego linku, aby zaprosić znajomych do gry.',
+    visibilityChanged: {
+      public: 'Pokój jest teraz publiczny i każdy może do niego dołączyć.',
+      private: 'Pokój jest teraz prywatny i można do niego dołączyć tylko za zaproszeniem.',
+    },
+    leaveDialog: {
+      title: 'Opuszczasz to lobby?',
+      text: 'Czy chcesz rozłączyć się z tym lobby i wrócić do głównego menu?',
+      primaryButtonText: 'Tak',
+      secondaryButtonText: 'Nie',
+    },
+    addBot: 'Dodaj bota',
+    min: 'Min',
+  },
+  results: {
+    heading: 'Zakończono!',
+    thankYou: 'Dziękujemy za grę!',
+    feedbackQuestion: 'Prosimy {0}, abyśmy mogli ulepszyć tę grę.',
+    shareFeedback: 'podziel się swoją opinią',
+    feedbackUrl: 'https://forms.gle/KvarNiP6UaUaeNAB9',
+    toMainMenu: 'Do głównego menu',
+    playAgain: 'Zagraj ponownie',
+    x2: 'x2',
+    getBonusReward: 'Zdobądź {n} Esencji',
+    rewards: 'Nagrody:',
+    essenceReward: '+{n} Esencji',
+    rating: 'Twój ranking',
+  },
+  disconnectDialog: {
+    title: 'Rozłączono',
+    code: {
+      unknown:
+        'Coś poszło nie tak i Twoje połączenie zostało przerwane. Spróbuj połączyć się ponownie, a jeśli problem będzie się powtarzał – skontaktuj się z naszym wsparciem.',
+      application_offline:
+        'Serwer gry jest obecnie offline. Spróbuj połączyć się ponownie za minutę, a jeśli problem będzie się powtarzał – skontaktuj się z naszym wsparciem.',
+      incorrect_connection_params: 'Nie udało się połączyć z grą z powodu problemów technicznych. Spróbuj później.',
+      new_connection: 'Połączyłeś się z tą grą na innym urządzeniu.',
+      kick: 'Zostałeś wyrzucony z tego pokoju.',
+      too_many_players: 'W tym pokoju jest już za dużo graczy, spróbuj innego.',
+      game_already_in_progress: 'Ta gra jest już w trakcie i nie możesz do niej dołączyć, spróbuj innej.',
+      game_abandoned:
+        'Wszyscy gracze opuścili tę grę i została ona zamknięta. Nie martw się, możesz rozpocząć nową z menu głównego.',
+      player_left:
+        'Gracz opuścił tę grę na stałe i została ona zamknięta. Kary otrzymali tylko gracze, którzy opuścili grę, ranking pozostałych się nie zmienił.',
+    },
+    reconnect: 'Połącz ponownie',
+    toMainMenu: 'Do głównego menu',
+  },
+  unexpectedError: 'Wystąpił nieoczekiwany błąd, spróbuj ponownie później.',
+  kickPlayerDialog: {
+    title: 'Wyrzuć gracza z lobby',
+    text: 'Czy na pewno chcesz wyrzucić tego gracza z lobby?',
+    primaryButtonText: 'Tak',
+    secondaryButtonText: 'Nie',
+  },
+  leaveGame: 'Opuść tę grę',
+  leaveGameDialog: {
+    title: 'Opuścić tę grę?',
+    text: 'Ta gra będzie dla Ciebie liczona jako przegrana i nie będziesz mógł do niej ponownie dołączyć. Jesteś pewien?',
+    primaryButtonText: 'Tak',
+    secondaryButtonText: 'Nie',
+  },
+  search: {
+    heading: 'Wyszukiwanie meczu',
+    cancel: 'Anuluj wyszukiwanie',
+    cancelDialog: {
+      text: 'Anulować wyszukiwanie?',
+      primaryButtonText: 'Tak',
+      secondaryButtonText: 'Nie',
+    },
+  },
+  pause: {
+    title: 'Pauza',
+    reason: {
+      player_disconnected: 'Czekamy na rozłączonych graczy. Gra wkrótce zostanie wznowiona.',
+      unknown: 'Gra jest wstrzymana z nieznanych przyczyn, ale wkrótce zostanie wznowiona.',
+    },
+  },
+  playerLeftGame: 'Gracz "{name}" opuścił grę.',
+  skipTurn: 'Pomiń turę',
+  drawCard: 'Dobierz kartę i pomiń turę',
+};

@@ -1,0 +1,20 @@
+---
+layout: layouts/second-level.njk
+title: Pawsome Elements | News | Blog
+pagination:
+  data: collections.blog_en
+  size: 5
+  alias: blogposts
+  reverse: true
+---
+
+<h1>Blog</h1>
+{% set postlist = {
+  items: blogposts,
+  next: pagination.href.next,
+  previous: pagination.href.previous,
+  currentPage: pagination.pageNumber + 1,
+  totalPages: pagination.pages.length
+} %}
+{% include 'blocks/postlist.njk' %}
+{% include 'blocks/play-now.njk' %}

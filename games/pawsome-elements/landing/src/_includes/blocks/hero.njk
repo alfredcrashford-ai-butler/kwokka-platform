@@ -1,0 +1,26 @@
+<section class="hero">
+  <div class="hero__card hero__card_left-2"></div>
+  <div class="hero__card hero__card_left-1"></div>
+  <div class="hero__card hero__card_left-3"></div>
+  <div class="hero__card hero__card_right-2"></div>
+  <div class="hero__card hero__card_right-1"></div>
+  <div class="hero__card hero__card_right-3"></div>
+  <div class="hero__container">
+    <img class="hero__logo-image" src="/public/logo_horizontal.webp" alt="Pawsome Elements"/>
+    <h1 class="hero__heading">{{ 'hero.heading' | i18n | safe }}</h1>
+    <p class="hero__caption">
+      <span>{{ 'hero.cardGame' | i18n }}</span>
+      <span>&#8226;</span>
+      <span>{{ 'hero.multiplayer' | i18n }}</span>
+      <span>&#8226;</span>
+      <span>{{ 'hero.free' | i18n }}</span>
+    </p>
+    <a class="hero__button hide_min-width-sm link-reset button button_type-primary button_size-sm nine-box" href="{{ links.app }}">
+      <span>{{ 'playNow' | i18n }}</span>
+    </a>
+    <a class="hero__button hide_max-width-sm link-reset button button_type-primary button_size-md nine-box" href="{{ links.app }}">
+      <span>{{ 'playNow' | i18n }}</span>
+    </a>
+  </div>
+  <div class="hero__scroll-indicator"></div>
+</section>

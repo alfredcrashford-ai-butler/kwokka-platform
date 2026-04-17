@@ -1,0 +1,9 @@
+:root {
+  --pwsm-text-shadow-1: 0 #{UiSpacing(0.25)} #{UiSpacing(0.25)} rgba(0, 0, 0, 0.4);
+  --pwsm-text-shadow-2: var(--pwsm-text-shadow-1), 0 0 #{UiSpacing(1)} rgba(0, 0, 0, 0.5);
+  --pwsm-text-shadow-3: var(--pwsm-text-shadow-2), 0 0 #{UiSpacing(2)} rgba(0, 0, 0, 0.6);
+}
+
+@mixin UiTextShadow($size) {
+  text-shadow: var(--pwsm-text-shadow-#{$size});
+}

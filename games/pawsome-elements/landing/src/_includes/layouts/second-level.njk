@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="second-level-layout">
+  {% include "blocks/header.njk" %}
+  {% include "blocks/header-filler.njk" %}
+
+  <div class="second-level-layout__content">
+    <a href="{{ (backTo and "/" + locale + "/" + backTo) or "/" + locale }}">&#8592; {{ 'goBack' | i18n }}</a>
+    {{ content | safe }}
+  </div>
+
+  {% include 'blocks/footer.njk' %}
+</div>

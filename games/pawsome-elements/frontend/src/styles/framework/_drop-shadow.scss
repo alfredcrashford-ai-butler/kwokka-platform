@@ -1,0 +1,9 @@
+:root {
+  --pwsm-drop-shadow-1: drop-shadow(0 0 #{UiSpacing(0.4)} #{UiColor('black', 0.75)});
+  --pwsm-drop-shadow-2: var(--pwsm-drop-shadow-1) drop-shadow(0 0 #{UiSpacing(1)} #{UiColor('black', 0.5)});
+  --pwsm-drop-shadow-3: var(--pwsm-drop-shadow-2) drop-shadow(0 0 #{UiSpacing(2)} #{UiColor('black', 0.4)});
+}
+
+@mixin UiDropShadow($size) {
+  filter: var(--pwsm-drop-shadow-#{$size});
+}

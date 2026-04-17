@@ -1,0 +1,95 @@
+export default {
+  roomPreparation: {
+    emptySlot: '空きスロット',
+    hostPrivateLabel: 'プライベートロビー？',
+    visibility: 'ロビーの表示設定',
+    public: '公開',
+    private: '非公開',
+    hostTooltip: '{n}人以上のプレイヤーが参加するとゲームを開始できます。',
+    guestTooltip: 'ゲームの開始はホストのみ可能です。',
+    hostSubmit: 'ゲーム開始',
+    guestSubmit: 'ホストの開始を待っています...',
+    copy: 'リンクをコピー',
+    invitationLinkLabel: '招待リンク',
+    invitationLinkCaption: '以下のリンクを使って友達をゲームに招待しましょう。',
+    visibilityChanged: {
+      public: 'ルームは公開設定になり、誰でもアクセス可能です。',
+      private: 'ルームは非公開設定になり、招待された人のみアクセス可能です。',
+    },
+    leaveDialog: {
+      title: 'このロビーを退出しますか？',
+      text: 'ロビーから切断してメインメニューに戻りますか？',
+      primaryButtonText: 'はい',
+      secondaryButtonText: 'いいえ',
+    },
+    addBot: 'ボットを追加',
+    min: '最小',
+  },
+  results: {
+    heading: '終了！',
+    thankYou: 'プレイありがとうございました！',
+    feedbackQuestion: 'ゲームをより良くするためにぜひ{0}してください。',
+    shareFeedback: 'フィードバックを送る',
+    feedbackUrl: 'https://forms.gle/KvarNiP6UaUaeNAB9',
+    toMainMenu: 'メインメニューへ',
+    playAgain: 'もう一度プレイ',
+    x2: 'x2',
+    getBonusReward: '{n} エッセンスを獲得',
+    rewards: '報酬:',
+    essenceReward: '+{n} エッセンス',
+    rating: 'あなたのレーティング',
+  },
+  disconnectDialog: {
+    title: '切断されました',
+    code: {
+      unknown:
+        '問題が発生し接続が途切れました。再接続を試みてください。それでも問題が続く場合はサポートにお問い合わせください。',
+      application_offline:
+        'ゲームサーバーは現在オフラインです。しばらくしてから再接続してください。それでも問題が続く場合はサポートにお問い合わせください。',
+      incorrect_connection_params: '技術的な問題によりゲームに接続できません。後ほど再度お試しください。',
+      new_connection: '別のデバイスからこのゲームに接続されました。',
+      kick: 'このルームからキックされました。',
+      too_many_players: 'このルームには既に多くのプレイヤーが接続しています。別のルームを試してください。',
+      game_already_in_progress: 'このゲームはすでに進行中で参加できません。別のゲームを試してください。',
+      game_abandoned:
+        '全プレイヤーがゲームから切断され、ゲームは終了しました。メインメニューから新しいゲームを始められます。',
+      player_left:
+        'プレイヤーがゲームを途中で退出し、ゲームは終了しました。退出したプレイヤーにはペナルティが課され、他のプレイヤーのレーティングは変わりません。',
+    },
+    reconnect: '再接続',
+    toMainMenu: 'メインメニューへ',
+  },
+  unexpectedError: '予期しないエラーが発生しました。後ほど再度お試しください。',
+  kickPlayerDialog: {
+    title: 'プレイヤーをロビーからキック',
+    text: 'このプレイヤーを本当にロビーからキックしますか？',
+    primaryButtonText: 'はい',
+    secondaryButtonText: 'いいえ',
+  },
+  leaveGame: 'ゲームを退出する',
+  leaveGameDialog: {
+    title: 'ゲームを退出しますか？',
+    text: 'このゲームは負けとしてカウントされ、再参加できなくなります。よろしいですか？',
+    primaryButtonText: 'はい',
+    secondaryButtonText: 'いいえ',
+  },
+  search: {
+    heading: '対戦相手を検索中',
+    cancel: '検索をキャンセル',
+    cancelDialog: {
+      text: '検索をキャンセルしますか？',
+      primaryButtonText: 'はい',
+      secondaryButtonText: 'いいえ',
+    },
+  },
+  pause: {
+    title: '一時停止',
+    reason: {
+      player_disconnected: '切断されたプレイヤーを待っています。まもなくゲームは再開されます。',
+      unknown: '不明な理由でゲームが一時停止しましたが、まもなく再開されます。',
+    },
+  },
+  playerLeftGame: 'プレイヤー「{name}」がゲームを退出しました。',
+  skipTurn: 'ターンをスキップ',
+  drawCard: 'カードを引いてターンをスキップ',
+};

@@ -1,0 +1,66 @@
+name: Deploy to netlify
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Run URL
+        run: echo "RUN_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> $GITHUB_ENV
+
+      - name: Send Run URL to Discord
+        uses: appleboy/discord-action@v1.2.0
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          message: '@${{ github.repository }}: CI job started. Link to job: ${{ env.RUN_URL }}.'
+          color: '#4287f5'
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@kwokka'
+
+      - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_NPM_REGISTRY_TOKEN }}
+
+      - run: npm run build
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: './dist'
+          production-branch: master
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'Deployed from GitHub Actions: "${{ github.event.head_commit.message }}", repo: ${{ github.repository }}, commit: ${{ github.sha }}, run_id: ${{ github.run_id }}'
+          netlify-config-path: ./netlify.toml
+          fails-without-credentials: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
+
+      - name: Send Discord Message - Failure
+        if: failure()
+        uses: appleboy/discord-action@v1.2.0
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          message: '@${{ github.repository }}: CI job failed. Link to job: ${{ env.RUN_URL }}.'
+          color: '#f54242'
+
+      - name: Send Discord Message - Completed
+        if: success()
+        uses: appleboy/discord-action@v1.2.0
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          message: '@${{ github.repository }}: CI job completed. Link to job: ${{ env.RUN_URL }}.'
+          color: '#48f442'

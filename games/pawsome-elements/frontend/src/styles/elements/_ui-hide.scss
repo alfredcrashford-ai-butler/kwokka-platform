@@ -1,0 +1,87 @@
+.ui-hide {
+  display: none !important;
+
+  &_max-width-sm {
+    @include UiMediaMaxWidth(sm) {
+      display: none !important;
+    }
+  }
+
+  &_max-width-md {
+    @include UiMediaMaxWidth(md) {
+      display: none !important;
+    }
+  }
+
+  &_max-width-lg {
+    @include UiMediaMaxWidth(lg) {
+      display: none !important;
+    }
+  }
+
+  &_min-width-sm {
+    @include UiMediaMinWidth(sm) {
+      display: none !important;
+    }
+  }
+
+  &_min-width-md {
+    @include UiMediaMinWidth(md) {
+      display: none !important;
+    }
+  }
+
+  &_min-width-lg {
+    @include UiMediaMinWidth(lg) {
+      display: none !important;
+    }
+  }
+
+  &_max-height-sm {
+    @include UiMediaMaxHeight(sm) {
+      display: none !important;
+    }
+  }
+
+  &_max-height-md {
+    @include UiMediaMaxHeight(md) {
+      display: none !important;
+    }
+  }
+
+  &_max-height-lg {
+    @include UiMediaMaxHeight(lg) {
+      display: none !important;
+    }
+  }
+
+  &_min-height-sm {
+    @include UiMediaMinHeight(sm) {
+      display: none !important;
+    }
+  }
+
+  &_min-height-md {
+    @include UiMediaMinHeight(md) {
+      display: none !important;
+    }
+  }
+
+  &_min-height-lg {
+    @include UiMediaMinHeight(lg) {
+      display: none !important;
+    }
+  }
+
+  &_portrait {
+    @media screen and (orientation: portrait) {
+      display: none !important;
+    }
+  }
+
+  &_landscape {
+    @media screen and (orientation: landscape) {
+      display: none !important;
+    }
+  }
+}

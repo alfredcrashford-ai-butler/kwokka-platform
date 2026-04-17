@@ -1,0 +1,14 @@
+<div>
+  <div class="contentful">
+    <p>{{ 'redirectToOtherLocales.paragraph' | i18n }}</p>
+    <ul>
+      {% for lc in locales -%}
+        {% if lc.code in redirect.locales %}
+          <li>
+            <a href="/{{ lc.code }}/{{ redirect.link }}">{{ lc.label }}</a>
+          </li>
+        {% endif %}
+      {% endfor -%}
+    </ul>
+  </div>
+</div>

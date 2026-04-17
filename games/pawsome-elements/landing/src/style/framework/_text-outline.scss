@@ -1,0 +1,3 @@
+@mixin UiTextOutline($size) {
+  filter: url('#pwsm-outline-#{$size}');
+}

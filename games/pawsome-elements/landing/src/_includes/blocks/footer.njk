@@ -1,0 +1,41 @@
+<footer class="footer">
+  <div class="footer__socials">
+    <div class="footer__socials-border footer__socials-border_top"></div>
+    <div class="footer__socials-container">
+      <div class="footer__socials-texture footer__socials-texture_left"></div>
+      <div class="footer__socials-content">
+        <h2 class="footer__socials-heading">{{ 'footer.socialsHeading' | i18n }}</h2>
+        <div class="footer__socials-links">
+          {# <a class="footer__socials-link" href="{{ links.socials.facebook }}"><img class="footer__socials-link-img" src="/public/blocks/footer/facebook.svg" alt="Facebook" loading="lazy"/> </a> #}
+          {# <a class="footer__socials-link" href="{{ links.socials.x }}"><img class="footer__socials-link-img" src="/public/blocks/footer/x.svg" alt="X" loading="lazy"/> </a> #}
+          <a class="footer__socials-link" href="{{ links.socials.discord }}"><img class="footer__socials-link-img" src="/public/blocks/footer/discord.svg" alt="Discord" loading="lazy"/> </a>
+          <a class="footer__socials-link" href="{{ links.socials.reddit }}"><img class="footer__socials-link-img" src="/public/blocks/footer/reddit.svg" alt="Reddit" loading="lazy"/> </a>
+          <a class="footer__socials-link" href="{{ links.socials.instagram }}"><img class="footer__socials-link-img" src="/public/blocks/footer/instagram.svg" alt="Instagram" loading="lazy"/> </a>
+          <a class="footer__socials-link" href="{{ links.socials.tiktok }}"><img class="footer__socials-link-img" src="/public/blocks/footer/tiktok.svg" alt="Tiktok" loading="lazy"/> </a>
+          <a class="footer__socials-link" href="{{ links.socials.youtube }}"><img class="footer__socials-link-img" src="/public/blocks/footer/youtube.svg" alt="Tiktok" loading="lazy"/> </a>
+        </div>
+      </div>
+      <div class="footer__socials-texture footer__socials-texture_right"></div>
+    </div>
+    <div class="footer__socials-border footer__socials-border_bottom"></div>
+  </div>
+
+  <div class="footer__container">
+    {% include "blocks/copyright.njk" %}
+
+    <ul class="footer__links">
+      {# <li><a href="/{{ locale }}/{{ links.termsOfService }}">{{ 'footer.termsOfService' | i18n }}</a></li> #}
+      <li><a href="/{{ locale }}/{{ links.contact }}">{{ 'nav.contact' | i18n }}</a></li>
+      <li><a href="/{{ locale }}/{{ links.legalNotice }}">{{ 'nav.legalNotice' | i18n }}</a></li>
+      <li><a href="/{{ locale }}/{{ links.privacyPolicy }}">{{ 'nav.privacyPolicy' | i18n }}</a></li>
+      <li>
+        <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID
+        parameter. Place it where appropriate, style it as needed. -->
+        <a href="#" data-cookie-consent="showPreferences">{{ 'footer.setupCookies' | i18n }}</a>
+      </li>
+    </ul>
+    <div class="footer__controls">
+      {% include "blocks/language-select.njk" %}
+    </div>
+  </div>
+</footer>

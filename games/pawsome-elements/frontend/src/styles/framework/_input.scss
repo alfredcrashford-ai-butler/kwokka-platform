@@ -1,0 +1,19 @@
+// adds standart input behavior
+@mixin UiInputAppearance() {
+  @include UiPadding(3, left);
+  @include UiPadding(3, right);
+  @include UiTypographyParagraph1();
+
+  width: 100%;
+
+  background-color: UiColor(shade-900);
+  border: UiSpacing(0.3) solid UiColor(secondary-500);
+  color: UiColor(shade-100);
+  @include UiBorderRadius(1);
+
+  &::placeholder {
+    font-size: inherit;
+    font-weight: inherit;
+    color: UiColor(shade-400);
+  }
+}

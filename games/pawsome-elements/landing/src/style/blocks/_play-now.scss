@@ -1,0 +1,23 @@
+.play-now {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include UiGap(5);
+  text-align: center;
+  @include UiPadding(10);
+  @include UiMargin(10, top);
+  background-color: UiColor(shade-800);
+  @include UiBorderRadius(4);
+
+  &__heading {
+    @include UiTypographyHeading3();
+    @include UiTextShadow(2);
+  }
+
+  &__paragraph {
+    @include UiTypographyHeading5();
+    @include UiTextShadow(2);
+  }
+}

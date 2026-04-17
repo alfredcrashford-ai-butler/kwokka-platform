@@ -1,0 +1,35 @@
+export default {
+  narratorTitle: 'Mędrzec Woofried',
+  ok: 'Ok',
+  tutorial: {
+    step1: 'Twoja tura jest pierwsza, więc możesz zagrać dowolną kartę.',
+    step2: 'Zagrajmy tę <i>Filth Golden Retriever (6)</i>.',
+    step3: 'Fantastycznie. Po zagraniu karty tura przechodzi do następnego gracza.',
+    step4: 'Twoim celem jest pozbycie się wszystkich kart.',
+    step5: 'Możesz zagrać kartę, która pasuje <b>ELEMENTEM</b> lub <b>WARTOŚCIĄ</b> do karty na stole.',
+    step6: 'Zagrajmy tę <i>Arcane Corgi (5)</i>, bo pasuje <b>ELEMENTEM</b> do karty na stole.',
+    step7: 'Zobacz, przeciwnik zagrał dokładną kopię twojej karty – <i>Nature Yorkshire Terrier (2)</i>.',
+    step8: 'Możesz teraz zagrać tę kopię poza swoją turą. Zróbmy to!',
+    step9: 'Niektóre karty mają specjalne efekty, jak ta <i>Nature Shaking</i>. Zagrajmy ją!',
+    step10: 'Niektóre karty są interaktywne, jak ta <i>Arcane Hydrant</i>. Zagrajmy ją!',
+    step11: 'Uważaj, inni gracze też mogą grać takimi kartami.',
+    step12: 'W Pawsome Elements każdy jest magiem, a magowie rzucają zaklęcia.',
+    step13: 'Ty też możesz rzucić zaklęcie. Twoje zaklęcie sprawia, że wybrany przeciwnik dobiera karty.',
+    step14: 'Wypróbujmy to.',
+    step15: 'Niesamowite! Uważaj jednak, inni gracze też mogą rzucać zaklęcia.',
+    step16: 'Twoja tura, ale wydaje się, że nie możesz zagrać żadnej karty.',
+    step17: 'W takim przypadku po prostu dobierz kartę i pomiń turę.',
+    step18: 'Na końcu masz tylko 1 kartę – <b>Multidog</b>, specjalną kartę, którą można zagrać na każdą inną kartę.',
+    step19: 'Słodki moment chwały. Zagraj ją!',
+    step20: 'Wygrałeś! Teraz wiesz, jak grać w <i>Pawsome Elements</i>.',
+  },
+  ranked: {
+    step1: 'Witaj w trybie rankingowym Pawsome Elements! Tutaj wkrótce zaczniesz grać mecze rankingowe.',
+    step2:
+      'Po lewej stronie znajdziesz przydatne informacje: jakie karty są w talii, jakie są zasady i jak działa ranking.',
+    step3: 'Po prawej stronie znajdziesz swój ranking i ogólne statystyki.',
+    step4:
+      'To wszystko! Nie zapomnij wyposażyć odpowiedniego zaklęcia przez Atlas. Inni na pewno to zrobią, więc nie daj im przewagi!',
+  },
+  atlas: {},
+};

@@ -1,0 +1,85 @@
+$font-weight: (
+  'black': 900,
+  'regular': 700,
+) !default;
+
+@mixin UiFontWeight($size) {
+  font-weight: map.get($font-weight, #{$size});
+}
+
+// HEADINGS
+
+@mixin UiTypographyHeading1() {
+  font-size: 4rem;
+  line-height: 1.25;
+  @include UiFontWeight(bold);
+}
+
+@mixin UiTypographyHeading2() {
+  font-size: 3rem;
+  line-height: 1.25;
+  @include UiFontWeight(bold);
+}
+
+@mixin UiTypographyHeading3() {
+  font-size: 2rem;
+  line-height: 1.25;
+  @include UiFontWeight(bold);
+}
+
+@mixin UiTypographyHeading4() {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  @include UiFontWeight(bold);
+}
+
+@mixin UiTypographyHeading5() {
+  font-size: 1.35rem;
+  line-height: 1.5;
+  @include UiFontWeight(bold);
+}
+
+@mixin UiTypographyHeading6() {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  @include UiFontWeight(bold);
+}
+
+// PARAGRAPHS
+
+@mixin UiTypographyParagraph1() {
+  font-size: 1rem;
+  line-height: 1.15;
+  @include UiFontWeight(regular);
+}
+
+@mixin UiTypographyParagraph2() {
+  font-size: 0.75rem;
+  line-height: 1;
+  @include UiFontWeight(regular);
+}
+
+@mixin UiTypographyParagraph3() {
+  font-size: 0.65rem;
+  line-height: 1;
+  @include UiFontWeight(regular);
+}
+
+@mixin UiTypographyParagraph4() {
+  font-size: 0.5rem;
+  line-height: 1;
+  @include UiFontWeight(regular);
+}
+
+// INTERACTIVE ELEMENTS
+
+@mixin UiTypographyLink {
+  color: UiColor(primary-500);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}

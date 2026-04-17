@@ -1,0 +1,131 @@
+$media-size-down: (
+  sm: 600px,
+  md: 992px,
+  lg: 1200px,
+) !default;
+
+$media-size-up: (
+  sm: 601px,
+  md: 993px,
+  lg: 1201px,
+) !default;
+
+@mixin UiMediaMaxWidth($size) {
+  @media screen and (max-width: #{map.get($media-size-down, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMinWidth($size) {
+  @media screen and (min-width: #{map.get($media-size-up, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMaxHeight($size) {
+  @media screen and (max-height: #{map.get($media-size-down, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMinHeight($size) {
+  @media screen and (min-height: #{map.get($media-size-up, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMaxSize($size) {
+  @media screen and (max-height: #{map.get($media-size-down, $size)}), screen and (max-width: #{map.get($media-size-down, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMinSize($size) {
+  @media screen and (min-height: #{map.get($media-size-up, $size)}), screen and (min-width: #{map.get($media-size-up, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaPortrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin UiMediaLandscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin UiMediaContainerMaxWidth($size) {
+  @container (max-width: #{$size}) {
+    @content;
+  }
+}
+
+@mixin UiMediaContainerMinWidth($size) {
+  @container (min-width: #{$size}) {
+    @content;
+  }
+}
+
+@mixin UiMediaContainerMaxHeight($size) {
+  @container (max-height: #{$size}) {
+    @content;
+  }
+}
+
+@mixin UiMediaContainerMinHeight($size) {
+  @container (min-height: #{$size}) {
+    @content;
+  }
+}
+
+@mixin UiMediaContainerMaxSize($size) {
+  @container (max-width: #{$size}) or (max-height: #{$size}) {
+    @content;
+  }
+}
+
+@mixin UiMediaContainerMinSize($size) {
+  @container (min-width: #{$size}) or (min-height: #{$size}) {
+    @content;
+  }
+}
+
+@mixin UiMediaContainerMaxAspectRatio($ratio) {
+  @container (max-aspect-ratio: #{$ratio}) {
+    @content;
+  }
+}
+
+@mixin UiMediaContainerMinAspectRatio($ratio) {
+  @container (min-aspect-ratio: #{$ratio}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMaxAspectRatio($w, $h) {
+  @media screen and (max-aspect-ratio: "#{$w} / #{$h}") {
+    @content;
+  }
+}
+
+@mixin UiMediaMinAspectRatio($w, $h) {
+  @media screen and (min-aspect-ratio: "#{$w} / #{$h}") {
+    @content;
+  }
+}
+
+@mixin UiMediaContainerPortrait {
+  @container (max-aspect-ratio: 1) {
+    @content;
+  }
+}
+
+@mixin UiMediaContainerLandscape {
+  @container (min-aspect-ratio: 1) {
+    @content;
+  }
+}

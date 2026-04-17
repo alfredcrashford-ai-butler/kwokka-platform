@@ -1,0 +1,18 @@
+.action-card {
+  @include UiPadding(4, left);
+  @include UiPadding(4, right);
+  @include UiPadding(3, top);
+  @include UiPadding(7, bottom);
+  @include Ui9BoxWidth(UiSpacing(12));
+  @include Ui9BoxHeight(UiSpacing(12));
+  @include Ui9BoxTopLeft('/public/ui/card_1/card_1_top_left.webp');
+  @include Ui9BoxTop('/public/ui/card_1/card_1_top.webp');
+  @include Ui9BoxTopRight('/public/ui/card_1/card_1_top_right.webp');
+  @include Ui9BoxLeft('/public/ui/card_1/card_1_left.webp');
+  @include Ui9BoxCenter('/public/ui/card_1/card_1_center.webp');
+  @include Ui9BoxRight('/public/ui/card_1/card_1_right.webp');
+  @include Ui9BoxBottomLeft('/public/ui/card_1/card_1_bottom_left.webp');
+  @include Ui9BoxBottom('/public/ui/card_1/card_1_bottom.webp');
+  @include Ui9BoxBottomRight('/public/ui/card_1/card_1_bottom_right.webp');
+  @include UiDropShadow(3);
+}

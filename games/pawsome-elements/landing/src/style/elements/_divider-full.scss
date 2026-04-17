@@ -1,0 +1,10 @@
+.divider-full {
+  height: UiSpacing(4);
+  width: 100%;
+  background-image: url('/public/ui/card_1/card_divider.webp');
+  background-size: 100% 100%;
+
+  @include UiMediaMaxWidth(sm) {
+    height: UiSpacing(3);
+  }
+}

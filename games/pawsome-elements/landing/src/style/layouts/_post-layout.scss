@@ -1,0 +1,16 @@
+.post-layout {
+  min-height: 100%;
+
+  &__date {
+    width: 100%;
+    display: block;
+    text-align: end;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    @include UiPadding(5, top);
+  }
+
+  &__content {
+    @include UiMargin(10, top);
+    @include UiMargin(10, bottom);
+  }
+}

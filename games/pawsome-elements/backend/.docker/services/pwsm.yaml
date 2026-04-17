@@ -1,0 +1,33 @@
+services:
+  pwsm:
+    build:
+      context: ../../
+      dockerfile: ./Dockerfile
+      args:
+        - NODE_AUTH_TOKEN
+    command: 'npm run start:prod'
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
+      - LOG_LEVEL=info
+      - KWOKKA_ENDPOINT=https://api.kwokka.co
+      # OVERRIDE WHEN EXTENDING
+      - GAME_SERVER_HOST=https://api.pawsome-elements.com
+      - GAME_SERVER_PATH=/v1/game
+      - SENTRY_DSN
+      - KWOKKA_CLIENT_ID
+      - KWOKKA_SECRET
+    healthcheck:
+      # OVERRIDE WHEN EXTENDING
+      test: curl pwsm:8080/healthcheck
+      interval: 3s
+      timeout: 10s
+      retries: 15
+      start_period: 5s
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '2048m'
+        max-file: '3'
+        tag: '{{.Name}}-{{.ID}}'

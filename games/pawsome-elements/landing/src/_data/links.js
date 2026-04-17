@@ -1,0 +1,37 @@
+module.exports = {
+  app: 'https://app.pawsome-elements.com?utm_source=website',
+  kwokka: 'https://kwokka.co',
+  privacyPolicy: 'pp',
+  termsOfService: 'tos',
+  legalNotice: 'legal-notice',
+  game: {
+    gameplay: 'game/gameplay',
+    cards: 'game/cards',
+    spells: 'game/spells',
+    ranked: 'game/ranked',
+    essence: 'game/essence',
+    story: 'game/story',
+    beginnersGuide: 'game/beginners-guide',
+    strategy: 'game/strategy',
+    faq: 'game/faq',
+  },
+  news: {
+    blog: 'news/blog',
+    releases: 'news/releases',
+  },
+  community: {
+    leaderboard: 'community/leaderboard',
+    socials: 'community/socials',
+  },
+  about: 'about',
+  contact: 'contact',
+  socials: {
+    x: '#',
+    facebook: '#',
+    discord: 'https://discord.gg/QYsbRWbVtQ',
+    reddit: 'https://www.reddit.com/r/PawsomeElements',
+    instagram: 'https://www.instagram.com/pawsome_elements',
+    tiktok: 'https://www.tiktok.com/@pawsome.elements?is_from_webapp=1&sender_device=pc',
+    youtube: 'https://www.youtube.com/@pawsome-elements',
+  },
+};

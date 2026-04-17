@@ -1,0 +1,40 @@
+.ui-9-box {
+  --pwsm--9box--width: 0px;
+  --pwsm--9box--height: 0px;
+  --pwsm--9box--top-left: none;
+  --pwsm--9box--top: none;
+  --pwsm--9box--top-right: none;
+  --pwsm--9box--left: none;
+  --pwsm--9box--center: none;
+  --pwsm--9box--right: none;
+  --pwsm--9box--bottom-left: none;
+  --pwsm--9box--bottom: none;
+  --pwsm--9box--bottom-right: none;
+  background-image:
+    var(--pwsm--9box--top-left), var(--pwsm--9box--top), var(--pwsm--9box--top-right), var(--pwsm--9box--left),
+    var(--pwsm--9box--center), var(--pwsm--9box--right), var(--pwsm--9box--bottom-left), var(--pwsm--9box--bottom),
+    var(--pwsm--9box--bottom-right);
+  background-position:
+    0px 0px,
+    center top,
+    100% 0px,
+    0px center,
+    50% center,
+    100% center,
+    0px 100%,
+    center bottom,
+    100% 100%;
+  background-size:
+    var(--pwsm--9box--width) var(--pwsm--9box--height),
+    calc(100% - var(--pwsm--9box--width) * 2 + 2px) var(--pwsm--9box--height),
+    var(--pwsm--9box--width) var(--pwsm--9box--height),
+    var(--pwsm--9box--width) calc(100% - var(--pwsm--9box--height) * 2 + 2px),
+    calc(100% - var(--pwsm--9box--width) * 2 + 2px) calc(100% - var(--pwsm--9box--height) * 2 + 2px),
+    var(--pwsm--9box--width) calc(100% - var(--pwsm--9box--height) * 2 + 2px),
+    var(--pwsm--9box--width) var(--pwsm--9box--height),
+    calc(100% - var(--pwsm--9box--width) * 2 + 2px) var(--pwsm--9box--height),
+    var(--pwsm--9box--width) var(--pwsm--9box--height);
+  background-repeat: no-repeat;
+  /* The next line fixes the downscale blur issue, commented out as it makes images crispy */
+  // image-rendering: pixelated;
+}

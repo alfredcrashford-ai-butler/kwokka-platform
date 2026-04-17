@@ -1,0 +1,16 @@
+.scroll-panel {
+  @include UiPadding(20, left);
+  @include UiPadding(20, right);
+  @include UiPadding(5, top);
+  height: UiSpacing(68);
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  min-width: UiSpacing(90);
+  @include Ui9BoxWidth(UiSpacing(32));
+  @include Ui9BoxLeft('/public/ui/scroll/scroll_left.webp');
+  @include Ui9BoxCenter('/public/ui/scroll/scroll_center.webp');
+  @include Ui9BoxRight('/public/ui/scroll/scroll_right.webp');
+  @include UiDropShadow(3);
+  image-rendering: auto;
+}

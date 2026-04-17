@@ -1,0 +1,20 @@
+export default {
+  play: 'Graj',
+  practice: 'Ćwicz',
+  shop: 'Sklep',
+  atlas: 'Atlas',
+  journal: 'Dziennik',
+  signOut: 'Wyloguj się',
+  signOutConfirmation: 'Czy na pewno chcesz się wylogować?',
+  signUp: {
+    button: 'Zapisz postęp',
+    description: 'Jesteś zalogowany jako gość. Zarejestruj się, aby:',
+    saveProgress: 'Bezpiecznie zapisać swoje postępy',
+    shareProgress: 'Udostępniać postępy na wielu urządzeniach',
+    heading: 'Zarejestruj się',
+    success: 'Rejestracja zakończona sukcesem!',
+    alreadyHaveAccount: 'Mam już konto',
+    or: 'LUB',
+    createNewAccount: 'Utwórz nowe konto',
+  },
+};

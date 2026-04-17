@@ -1,0 +1,20 @@
+export default {
+  play: 'Play',
+  practice: 'Practice',
+  shop: 'Shop',
+  atlas: 'Atlas',
+  journal: 'Journal',
+  signOut: 'Sign out',
+  signOutConfirmation: 'Are you sure you want to sign out?',
+  signUp: {
+    button: 'Save progress',
+    description: 'You have entered as a guest. Sign up to:',
+    saveProgress: 'Securely save your progress',
+    shareProgress: 'Share your progress to multiple devices',
+    heading: 'Sign Up',
+    success: 'Successfully signed up!',
+    alreadyHaveAccount: 'Already have account',
+    or: 'OR',
+    createNewAccount: 'Create new account',
+  },
+};

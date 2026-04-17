@@ -1,0 +1,20 @@
+export default {
+  play: 'Oyna',
+  practice: 'Pratik Yap',
+  shop: 'Mağaza',
+  atlas: 'Atlas',
+  journal: 'Günlük',
+  signOut: 'Çıkış Yap',
+  signOutConfirmation: 'Çıkış yapmak istediğinizden emin misiniz?',
+  signUp: {
+    button: 'İlerlemeni Kaydet',
+    description: 'Misafir olarak giriş yaptınız. Kayıt olun ve:',
+    saveProgress: 'İlerlemeni güvenli bir şekilde kaydet',
+    shareProgress: 'İlerlemeni birden fazla cihazda paylaş',
+    heading: 'Kayıt Ol',
+    success: 'Başarıyla kayıt olundu!',
+    alreadyHaveAccount: 'Zaten bir hesabım var',
+    or: 'VEYA',
+    createNewAccount: 'Yeni hesap oluştur',
+  },
+};

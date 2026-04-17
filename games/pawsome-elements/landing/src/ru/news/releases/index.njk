@@ -1,0 +1,21 @@
+---
+layout: layouts/second-level.njk
+title: Pawsome Elements | Новости | Обновления
+pagination:
+  data: collections.release_ru
+  size: 5
+  alias: releases
+  reverse: true
+---
+
+<h1>Обновления</h1>
+
+{% set postlist = {
+  items: releases,
+  next: pagination.href.next,
+  previous: pagination.href.previous,
+  currentPage: pagination.pageNumber + 1,
+  totalPages: pagination.pages.length
+} %}
+{% include 'blocks/postlist.njk' %}
+{% include 'blocks/play-now.njk' %}

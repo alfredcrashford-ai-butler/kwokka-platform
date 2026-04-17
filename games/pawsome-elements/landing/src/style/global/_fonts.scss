@@ -1,0 +1,21 @@
+/* piazzolla-700 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Piazzolla';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('/public/fonts/piazzolla-v35-cyrillic_latin-700.woff2') format('woff2'),
+    url('/public/fonts/piazzolla-v35-cyrillic_latin-700.ttf') format('truetype');
+}
+
+/* piazzolla-900 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Piazzolla';
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url('/public/fonts/piazzolla-v35-cyrillic_latin-900.woff2') format('woff2'),
+    url('/public/fonts/piazzolla-v35-cyrillic_latin-900.ttf') format('truetype');
+}

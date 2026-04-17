@@ -1,0 +1,21 @@
+<div class="sidenav" x-data="{ open: false }" @keydown.escape="open = false">
+  <button class="sidenav__toggle" @click="open = true" aria-controls="sidenav">
+    <img src="/public/list-bold.svg" alt=""/>
+  </button>
+  <div id="sidenav" class="sidenav__container" x-show="open" x-transition x-cloak>
+    <div class="sidenav__backdrop" @click="open = false"></div>
+    <div class="sidenav__content">
+      <button class="sidenav__toggle" @click="open = false" aria-controls="sidenav">
+        <img src="/public/x-bold.svg" alt=""/>
+      </button>
+      <img class="sidenav__logo" src="/public/logo_horizontal.webp" alt="Pawsome Elements"/>
+      <div class="sidenav__main">
+        {% include "blocks/header-nav.njk" %}
+      </div>
+      <div class="sidenav__footer">
+        {% include "blocks/copyright.njk" %}
+        {% include "blocks/language-select.njk" %}
+      </div>
+    </div>
+  </div>
+</div>

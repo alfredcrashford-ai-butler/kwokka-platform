@@ -1,0 +1,39 @@
+<svg display="none" height="0">
+  <defs>
+    <filter id="pwsm-outline-1" color-interpolation-filters="sRGB">
+      <feMorphology in="SourceAlpha" result="MORPH" operator="dilate" radius="1"/>
+      <feColorMatrix in="MORPH" result="WHITENED" type="matrix" values="0 0 0 0 0.15, 0 0 0 0 0.1, 0 0 0 0 0.03, 0 0 0 1 0"/>
+      <feMerge>
+        <feMergeNode in="WHITENED"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="pwsm-outline-2" color-interpolation-filters="sRGB">
+      <feMorphology in="SourceAlpha" result="MORPH" operator="dilate" radius="2"/>
+      <feColorMatrix in="MORPH" result="WHITENED" type="matrix" values="0 0 0 0 0.15, 0 0 0 0 0.1, 0 0 0 0 0.03, 0 0 0 1 0"/>
+      <feMerge>
+        <feMergeNode in="WHITENED"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="pwsm-outline-3" color-interpolation-filters="sRGB">
+      <feMorphology in="SourceAlpha" result="MORPH" operator="dilate" radius="3"/>
+      <feColorMatrix in="MORPH" result="WHITENED" type="matrix" values="0 0 0 0 0.15, 0 0 0 0 0.1, 0 0 0 0 0.03, 0 0 0 1 0"/>
+      <feMerge>
+        <feMergeNode in="WHITENED"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="pwsm-outline-4" color-interpolation-filters="sRGB">
+      <feMorphology in="SourceAlpha" result="MORPH" operator="dilate" radius="4"/>
+      <feColorMatrix in="MORPH" result="WHITENED" type="matrix" values="0 0 0 0 0.15, 0 0 0 0 0.1, 0 0 0 0 0.03, 0 0 0 1 0"/>
+      <feMerge>
+        <feMergeNode in="WHITENED"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

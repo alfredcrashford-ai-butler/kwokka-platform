@@ -1,0 +1,81 @@
+<section class="how-to-play">
+  <div class="how-to-play__container">
+    <div class="how-to-play__card action-card nine-box">
+      <div class="how-to-play__heading-panel action-panel action-panel_sm nine-box hide_min-width-sm">
+        <h2 class="how-to-play__heading">{{ 'howToPlay.heading' | i18n }}</h2>
+      </div>
+      <div class="how-to-play__heading-panel action-panel nine-box hide_max-width-sm">
+        <h2 class="how-to-play__heading">{{ 'howToPlay.heading' | i18n }}</h2>
+      </div>
+      <div class="how-to-play__contents">
+        <video class="how-to-play__content how-to-play__content_is-active" data-how-to-play-content="1" alt="{{ 'howToPlay.contentAlt1' | i18n }}" autoplay muted disableremoteplayback playsinline loop>
+          <source src="/public/blocks/how-to-play/rule_1.mp4" />
+        </video>
+        <video class="how-to-play__content" data-how-to-play-content="2" alt="{{ 'howToPlay.contentAlt2' | i18n }}" autoplay muted disableremoteplayback playsinline loop>
+          <source src="/public/blocks/how-to-play/rule_2.mp4" />
+        </video>
+        <video class="how-to-play__content" data-how-to-play-content="3" alt="{{ 'howToPlay.contentAlt3' | i18n }}" autoplay muted disableremoteplayback playsinline loop>
+          <source src="/public/blocks/how-to-play/rule_3.mp4" />
+        </video>
+        <video class="how-to-play__content" data-how-to-play-content="4" alt="{{ 'howToPlay.contentAlt4' | i18n }}" autoplay muted disableremoteplayback playsinline loop>
+          <source src="/public/blocks/how-to-play/rule_4.mp4" />
+        </video>
+        <video class="how-to-play__content" data-how-to-play-content="5" alt="{{ 'howToPlay.contentAlt5' | i18n }}" autoplay muted disableremoteplayback playsinline loop>
+          <source src="/public/blocks/how-to-play/rule_5.mp4" />
+        </video>
+      </div>
+      <div class="how-to-play__captions">
+        <p class="how-to-play__caption how-to-play__caption_is-active" data-how-to-play-caption="1">{{ 'howToPlay.caption1' | i18n }}</p>
+        <p class="how-to-play__caption" data-how-to-play-caption="2">{{ 'howToPlay.caption2' | i18n }}</p>
+        <p class="how-to-play__caption" data-how-to-play-caption="3">{{ 'howToPlay.caption3' | i18n }}</p>
+        <p class="how-to-play__caption" data-how-to-play-caption="4">{{ 'howToPlay.caption4' | i18n }}</p>
+        <p class="how-to-play__caption" data-how-to-play-caption="5">{{ 'howToPlay.caption5' | i18n }}</p>
+      </div>
+      <div class="how-to-play__controls">
+        <button class="how-to-play__control how-to-play__control_is-active" data-how-to-play-control="1"><span>1</span></button>
+        <button class="how-to-play__control" data-how-to-play-control="2"><span>2</span></button>
+        <button class="how-to-play__control" data-how-to-play-control="3"><span>3</span></button>
+        <button class="how-to-play__control" data-how-to-play-control="4"><span>4</span></button>
+        <button class="how-to-play__control" data-how-to-play-control="5"><span>5</span></button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    {% set howtoplayjs %}
+      (function howToPlay() {
+        var CONTROL_SELECTOR = '[data-how-to-play-control]';
+        var CAPTION_SELECTOR = '[data-how-to-play-caption]';
+        var CONTENT_SELECTOR = '[data-how-to-play-content]';
+        var CAPTION_CLASS = 'how-to-play__caption';
+        var ACTIVE_CAPTION_CLASS = 'how-to-play__caption how-to-play__caption_is-active';
+        var CONTENT_CLASS = 'how-to-play__content';
+        var ACTIVE_CONTENT_CLASS = 'how-to-play__content how-to-play__content_is-active';
+        var CONTROL_CLASS = 'how-to-play__control';
+        var ACTIVE_CONTROL_CLASS = 'how-to-play__control how-to-play__control_is-active';
+
+        var controls = Array.from(document.querySelectorAll(CONTROL_SELECTOR));
+        var captions = Array.from(document.querySelectorAll(CAPTION_SELECTOR));
+        var contents = Array.from(document.querySelectorAll(CONTENT_SELECTOR));
+        for (var i = 0; i < controls.length; i++) {
+          controls[i].addEventListener('click', function(event) {
+            var index = this.attributes['data-how-to-play-control'].value;
+            captions.forEach(function(el) { el.className = CAPTION_CLASS; });
+            var activeCaption = captions.find(function(el) { return el.attributes['data-how-to-play-caption'].value === index; });
+            activeCaption.className = ACTIVE_CAPTION_CLASS;
+
+            contents.forEach(function(el) { el.className = CONTENT_CLASS; });
+            var activeContent = contents.find(function(el) { return el.attributes['data-how-to-play-content'].value === index; });
+            activeContent.className = ACTIVE_CONTENT_CLASS;
+
+            controls.forEach(function(el) { el.className = CONTROL_CLASS; });
+            var activeControl = controls.find(function(el) { return el.attributes['data-how-to-play-control'].value === index; });
+            activeControl.className = ACTIVE_CONTROL_CLASS;
+          });
+        }
+      })();
+
+    {% endset %}
+    {{ howtoplayjs | jsmin | safe }}
+  </script>
+</section>

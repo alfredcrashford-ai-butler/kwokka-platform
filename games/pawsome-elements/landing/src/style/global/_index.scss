@@ -1,0 +1,30 @@
+@import 'colors';
+@import 'fonts';
+@import 'reset';
+
+// fallback for font family to support
+$font-fallback: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+
+html {
+  font-family: Piazzolla, $font-fallback;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background-color: UiColor(shade-900);
+  color: UiColor(shade-100);
+}
+
+a:not(.link-reset) {
+  @include UiTypographyLink();
+}
+
+[x-cloak] {
+  display: none !important;
+}

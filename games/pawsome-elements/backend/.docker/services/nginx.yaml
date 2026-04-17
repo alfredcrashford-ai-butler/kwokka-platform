@@ -1,0 +1,26 @@
+services:
+  nginx:
+    image: jonasal/nginx-certbot:5.5.0
+    container_name: nginx
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    environment:
+      - CERTBOT_EMAIL
+    volumes:
+      - nginx_secrets:/etc/letsencrypt
+      - ./nginx/:/etc/nginx/user_conf.d/:readonly
+      - ./nginx/includes:/etc/nginx/includes/:readonly
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2048m"
+        max-file: "3"
+        tag: "{{.Name}}-{{.ID}}"
+    depends_on:
+      pwsm-eu-central-1:
+        condition: service_healthy
+
+volumes:
+  nginx_secrets:

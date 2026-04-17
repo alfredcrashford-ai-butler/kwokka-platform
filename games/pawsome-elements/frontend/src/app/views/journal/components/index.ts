@@ -1,0 +1,9 @@
+export { default as AboutPageLeft } from './AboutPageLeft.vue';
+export { default as AboutPageRight } from './AboutPageRight.vue';
+export { default as JournalTab } from './JournalTab.vue';
+export { default as NotesPageLeft } from './NotesPageLeft.vue';
+export { default as NotesPageRight } from './NotesPageRight.vue';
+export { default as QuestPageLeft } from './QuestPageLeft.vue';
+export { default as QuestPageRight } from './QuestPageRight.vue';
+export { default as TutorialPageLeft } from './TutorialPageLeft.vue';
+export { default as TutorialPageRight } from './TutorialPageRight.vue';

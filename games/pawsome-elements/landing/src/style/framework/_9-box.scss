@@ -1,0 +1,88 @@
+@function Ui9BoxPropertyName($suffix) {
+  @return --pwsm--9box--#{$suffix};
+}
+
+@mixin Ui9BoxHeight($size) {
+  #{Ui9BoxPropertyName(height)}: $size;
+}
+
+@mixin Ui9BoxWidth($size) {
+  #{Ui9BoxPropertyName(width)}: $size;
+}
+
+@mixin Ui9BoxTopLeft($src) {
+  #{Ui9BoxPropertyName(top-left)}: url(#{$src});
+}
+
+@mixin Ui9BoxTop($src) {
+  #{Ui9BoxPropertyName(top)}: url(#{$src});
+}
+
+@mixin Ui9BoxTopRight($src) {
+  #{Ui9BoxPropertyName(top-right)}: url(#{$src});
+}
+
+@mixin Ui9BoxLeft($src) {
+  #{Ui9BoxPropertyName(left)}: url(#{$src});
+}
+
+@mixin Ui9BoxCenter($src) {
+  #{Ui9BoxPropertyName(center)}: url(#{$src});
+}
+
+@mixin Ui9BoxRight($src) {
+  #{Ui9BoxPropertyName(right)}: url(#{$src});
+}
+
+@mixin Ui9BoxBottomLeft($src) {
+  #{Ui9BoxPropertyName(bottom-left)}: url(#{$src});
+}
+
+@mixin Ui9BoxBottom($src) {
+  #{Ui9BoxPropertyName(bottom)}: url(#{$src});
+}
+
+@mixin Ui9BoxBottomRight($src) {
+  #{Ui9BoxPropertyName(bottom-right)}: url(#{$src});
+}
+
+.nine-box {
+  --pwsm--9box--width: 0px;
+  --pwsm--9box--height: 0px;
+  --pwsm--9box--top-left: none;
+  --pwsm--9box--top: none;
+  --pwsm--9box--top-right: none;
+  --pwsm--9box--left: none;
+  --pwsm--9box--center: none;
+  --pwsm--9box--right: none;
+  --pwsm--9box--bottom-left: none;
+  --pwsm--9box--bottom: none;
+  --pwsm--9box--bottom-right: none;
+  background-image:
+    var(--pwsm--9box--top-left), var(--pwsm--9box--top), var(--pwsm--9box--top-right), var(--pwsm--9box--left),
+    var(--pwsm--9box--center), var(--pwsm--9box--right), var(--pwsm--9box--bottom-left), var(--pwsm--9box--bottom),
+    var(--pwsm--9box--bottom-right);
+  background-position:
+    0px 0px,
+    center top,
+    100% 0px,
+    0px center,
+    50% center,
+    100% center,
+    0px 100%,
+    center bottom,
+    100% 100%;
+  background-size:
+    var(--pwsm--9box--width) var(--pwsm--9box--height),
+    calc(100% - var(--pwsm--9box--width) * 2 + 2px) var(--pwsm--9box--height),
+    var(--pwsm--9box--width) var(--pwsm--9box--height),
+    var(--pwsm--9box--width) calc(100% - var(--pwsm--9box--height) * 2 + 2px),
+    calc(100% - var(--pwsm--9box--width) * 2 + 2px) calc(100% - var(--pwsm--9box--height) * 2 + 2px),
+    var(--pwsm--9box--width) calc(100% - var(--pwsm--9box--height) * 2 + 2px),
+    var(--pwsm--9box--width) var(--pwsm--9box--height),
+    calc(100% - var(--pwsm--9box--width) * 2 + 2px) var(--pwsm--9box--height),
+    var(--pwsm--9box--width) var(--pwsm--9box--height);
+  background-repeat: no-repeat;
+  /* The next line fixes the downscale blur issue */
+  image-rendering: pixelated;
+}

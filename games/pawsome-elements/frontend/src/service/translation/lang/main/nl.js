@@ -1,0 +1,20 @@
+export default {
+  play: 'Spelen',
+  practice: 'Oefenen',
+  shop: 'Winkel',
+  atlas: 'Atlas',
+  journal: 'Dagboek',
+  signOut: 'Uitloggen',
+  signOutConfirmation: 'Weet je zeker dat je wilt uitloggen?',
+  signUp: {
+    button: 'Voortgang opslaan',
+    description: 'Je bent als gast ingelogd. Meld je aan om:',
+    saveProgress: 'Je voortgang veilig op te slaan',
+    shareProgress: 'Je voortgang op meerdere apparaten te delen',
+    heading: 'Aanmelden',
+    success: 'Succesvol aangemeld!',
+    alreadyHaveAccount: 'Heb al een account',
+    or: 'OF',
+    createNewAccount: 'Nieuw account aanmaken',
+  },
+};

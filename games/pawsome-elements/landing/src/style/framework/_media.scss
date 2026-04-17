@@ -1,0 +1,71 @@
+$media-size-down: (
+  sm: 600px,
+  md: 992px,
+  lg: 1200px,
+) !default;
+
+$media-size-up: (
+  sm: 601px,
+  md: 993px,
+  lg: 1201px,
+) !default;
+
+@mixin UiMediaMaxWidth($size) {
+  @media screen and (max-width: #{map.get($media-size-down, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMinWidth($size) {
+  @media screen and (min-width: #{map.get($media-size-up, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMaxHeight($size) {
+  @media screen and (max-height: #{map.get($media-size-down, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMinHeight($size) {
+  @media screen and (min-height: #{map.get($media-size-up, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMaxSize($size) {
+  @media screen and (max-height: #{map.get($media-size-down, $size)}), screen and (max-width: #{map.get($media-size-down, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMinSize($size) {
+  @media screen and (min-height: #{map.get($media-size-up, $size)}), screen and (min-width: #{map.get($media-size-up, $size)}) {
+    @content;
+  }
+}
+
+@mixin UiMediaPortrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin UiMediaLandscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin UiMediaMaxAspectRatio($ratio) {
+  @media (max-aspect-ratio: #{$ratio}) {
+    @content;
+  }
+}
+
+@mixin UiMediaMinAspectRatio($ratio) {
+  @media (min-aspect-ratio: #{$ratio}) {
+    @content;
+  }
+}

@@ -1,0 +1,82 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  ci:
+    name: Build & Test & Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Run URL
+        run: echo "RUN_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> $GITHUB_ENV
+
+      - name: Send Run URL to Discord
+        uses: appleboy/discord-action@v1.2.0
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          message: '@${{ github.repository }}: CI job started. Link to job: ${{ env.RUN_URL }}.'
+          color: '#4287f5'
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@kwokka'
+
+      - name: Install Dependencies
+        run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_NPM_REGISTRY_TOKEN }}
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload sourcemaps
+        run: npm run sentry:sourcemaps
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+
+      - name: Run Tests
+        run: npm run test
+
+      - name: SSH connect, Build, Deploy
+        env:
+          SENTRY_DSN: ${{ vars.SENTRY_DSN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_NPM_REGISTRY_TOKEN }}
+          KWOKKA_CLIENT_ID: ${{ vars.KWOKKA_CLIENT_ID }}
+          KWOKKA_SECRET: ${{ secrets.KWOKKA_SECRET }}
+          CERTBOT_EMAIL: ${{ vars.CERTBOT_EMAIL }}
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          envs: SENTRY_DSN,NODE_AUTH_TOKEN,KWOKKA_CLIENT_ID,KWOKKA_SECRET,CERTBOT_EMAIL
+          script: |
+            cd ~/pawsome-elements-backend/
+            git pull
+            docker compose -f .docker/docker-compose.yaml up -d --no-deps --build --remove-orphans
+
+      - name: Send Discord Message - Failure
+        if: failure()
+        uses: appleboy/discord-action@v1.2.0
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          message: '@${{ github.repository }}: CI job failed. Link to job: ${{ env.RUN_URL }}.'
+          color: '#f54242'
+
+      - name: Send Discord Message - Completed
+        if: success()
+        uses: appleboy/discord-action@v1.2.0
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          message: '@${{ github.repository }}: CI job completed. Link to job: ${{ env.RUN_URL }}.'
+          color: '#48f442'

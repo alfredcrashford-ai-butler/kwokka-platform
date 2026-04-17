@@ -1,0 +1,95 @@
+export default {
+  roomPreparation: {
+    emptySlot: 'Boş yer',
+    hostPrivateLabel: 'Özel lobisi mi?',
+    visibility: 'Lobi görünürlüğü',
+    public: 'Herkese açık',
+    private: 'Özel',
+    hostTooltip: 'En az {n} oyuncu katıldığında oyun başlayabilir.',
+    guestTooltip: 'Oyunu sadece ev sahibi başlatabilir.',
+    hostSubmit: 'Oyunu Başlat',
+    guestSubmit: 'Ev sahibini Bekliyor...',
+    copy: 'Bağlantıyı kopyala',
+    invitationLinkLabel: 'Davet bağlantısı',
+    invitationLinkCaption: 'Oyuna arkadaşlarını davet etmek için aşağıdaki bağlantıyı kullan.',
+    visibilityChanged: {
+      public: 'Oda artık herkese açık ve herkes erişebilir.',
+      private: 'Oda artık özel ve sadece davetle erişilebilir.',
+    },
+    leaveDialog: {
+      title: 'Bu lobiden ayrılmak istiyor musun?',
+      text: 'Bu lobiden ayrılıp ana menüye dönmek istiyor musun?',
+      primaryButtonText: 'Evet',
+      secondaryButtonText: 'Hayır',
+    },
+    addBot: 'Bot ekle',
+    min: 'Dak',
+  },
+  results: {
+    heading: 'Bitti!',
+    thankYou: 'Oynadığınız için teşekkürler!',
+    feedbackQuestion: 'Lütfen {0}, böylece oyunu geliştirebiliriz.',
+    shareFeedback: 'geri bildiriminizi paylaşın',
+    feedbackUrl: 'https://forms.gle/KvarNiP6UaUaeNAB9',
+    toMainMenu: 'Ana menüye dön',
+    playAgain: 'Tekrar oyna',
+    x2: 'x2',
+    getBonusReward: '{n} Öz elde et',
+    rewards: 'Ödüller:',
+    essenceReward: '+{n} Öz',
+    rating: 'Puanınız',
+  },
+  disconnectDialog: {
+    title: 'Bağlantı Kesildi',
+    code: {
+      unknown:
+        'Bir şeyler ters gitti ve bağlantınız kesildi. Lütfen yeniden bağlanmayı deneyin, sorun devam ederse destek ekibimizle iletişime geçin.',
+      application_offline:
+        'Oyun sunucusu şu anda çevrimdışı. Lütfen bir dakika sonra tekrar bağlanmayı deneyin, sorun devam ederse destek ekibimizle iletişime geçin.',
+      incorrect_connection_params: 'Teknik sorunlar nedeniyle oyuna bağlanılamadı. Lütfen daha sonra tekrar deneyin.',
+      new_connection: 'Bu oyuna başka bir cihazdan bağlandınız.',
+      kick: 'Bu odadan atıldınız.',
+      too_many_players: 'Bu odaya çok fazla oyuncu bağlandı, başka bir oda deneyin.',
+      game_already_in_progress: 'Bu oyun zaten devam ediyor ve katılamazsınız, başka bir oyun deneyin.',
+      game_abandoned:
+        'Tüm oyuncular oyundan ayrıldı ve oyun kapatıldı. Endişelenmeyin, ana menüden yeni bir oyun başlatabilirsiniz.',
+      player_left:
+        'Bir oyuncu oyunu kalıcı olarak terk etti ve oyun kapatıldı. Sadece ayrılan oyuncular ceza aldı, diğer oyuncuların puanı değişmedi.',
+    },
+    reconnect: 'Tekrar bağlan',
+    toMainMenu: 'Ana menüye dön',
+  },
+  unexpectedError: 'Beklenmedik bir hata oluştu, lütfen daha sonra tekrar deneyin.',
+  kickPlayerDialog: {
+    title: 'Oyuncuyu lobiden at',
+    text: 'Bu oyuncuyu gerçekten lobiden atmak istiyor musunuz?',
+    primaryButtonText: 'Evet',
+    secondaryButtonText: 'Hayır',
+  },
+  leaveGame: 'Oyundan ayrıl',
+  leaveGameDialog: {
+    title: 'Bu oyundan ayrıl?',
+    text: 'Bu oyun sizin için kayıp olarak sayılacak ve tekrar katılamayacaksınız. Emin misiniz?',
+    primaryButtonText: 'Evet',
+    secondaryButtonText: 'Hayır',
+  },
+  search: {
+    heading: 'Maç aranıyor',
+    cancel: 'Aramayı iptal et',
+    cancelDialog: {
+      text: 'Aramayı iptal etmek istiyor musunuz?',
+      primaryButtonText: 'Evet',
+      secondaryButtonText: 'Hayır',
+    },
+  },
+  pause: {
+    title: 'Duraklatıldı',
+    reason: {
+      player_disconnected: 'Bağlantısı kesilen oyuncular bekleniyor. Oyun yakında devam edecek.',
+      unknown: 'Oyun, anlaşılamayan nedenlerle duraklatıldı, ancak yakında devam edecek.',
+    },
+  },
+  playerLeftGame: '"{name}" oyuncusu oyunu terk etti.',
+  skipTurn: 'Turu atla',
+  drawCard: 'Kart çek ve turu atla',
+};

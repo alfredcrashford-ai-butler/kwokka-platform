@@ -1,0 +1,44 @@
+$transitions: (
+  'bounce': cubic-bezier(0.35, 1, 0.5, 1.25),
+  'spring':
+    linear(
+      0,
+      0.01,
+      0.03,
+      0.14,
+      0.28 7%,
+      0.72,
+      0.94 17%,
+      1.02,
+      1.08,
+      1.12,
+      1.15,
+      1.16 26% 28%,
+      1.15,
+      1.13 33%,
+      1.05 40%,
+      1.02,
+      0.99,
+      0.98,
+      0.97 54% 57%,
+      1 70% 100%
+    ),
+  'default': ease-in-out,
+) !default;
+
+@function UiTransition($name: 'default') {
+  @return map.get($transitions, #{$name});
+}
+
+@mixin UiInlineAnimation($duration: null) {
+  $name: kwokka-inline-#{string.unique-id()};
+
+  animation-name: $name;
+  @if $duration {
+    animation-duration: $duration;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}

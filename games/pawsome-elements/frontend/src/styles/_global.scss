@@ -1,0 +1,76 @@
+html {
+  @include UiTypographyParagraph1();
+  font-family: Piazzolla, $font-fallback;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  --pwsm--font-size: calc(var(--pwsm--spacing-unit) * 4 * 0.75);
+  font-size: var(--pwsm--font-size);
+  font-weight: 700;
+
+  @include UiMediaLandscape() {
+    --pwsm--spacing-unit: 0.5vw;
+    @include UiMediaMinAspectRatio(16, 9) {
+      --pwsm--spacing-unit: calc(0.5vh / 9 * 16);
+    }
+  }
+
+  @include UiMediaPortrait() {
+    --pwsm--spacing-unit: 0.5vh;
+    @include UiMediaMaxAspectRatio(9, 16) {
+      --pwsm--spacing-unit: calc(0.5vw / 9 * 16);
+    }
+  }
+}
+
+#app {
+  container-type: size;
+}
+
+html,
+#app,
+.app,
+body {
+  height: 100%;
+  width: 100%;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  overflow: hidden;
+  color: UiColor(shade-100);
+  background-color: UiColor(shade-900);
+
+  @include UiMediaLandscape() {
+    --pwsm--container-aspect-ratio: 16 / 9;
+    --pwsm--container-width: 100%;
+    --pwsm--container-height: auto;
+
+    @include UiMediaMinAspectRatio(16, 9) {
+      --pwsm--container-height: 100%;
+      --pwsm--container-width: auto;
+    }
+  }
+
+  @include UiMediaPortrait() {
+    --pwsm--container-aspect-ratio: 9 / 16;
+    --pwsm--container-height: 100%;
+    --pwsm--container-width: auto;
+
+    @include UiMediaMaxAspectRatio(9, 16) {
+      --pwsm--container-width: 100%;
+      --pwsm--container-height: auto;
+    }
+  }
+}
+
+a:not(.ui-link-reset) {
+  @include UiTypographyLink();
+}
+
+// ELEMENTS
+@import 'elements/ui-overlay';
+@import 'elements/ui-hide';
+@import 'elements/ui-link-reset';
+@import 'elements/ui-sr-only';
+@import 'elements/ui-9-box';
+@import 'elements/ui-container';

@@ -1,0 +1,80 @@
+.faq {
+  position: relative;
+  background-image: linear-gradient(UiColor(shade-900, 0), UiColor(shade-900)), url('/public/blocks/faq/bg.webp');
+  overflow: hidden;
+
+  &__container {
+    @include UiPadding(45, top);
+    @include UiPadding(45, bottom);
+    @include UiContainer(280);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include UiMediaMaxWidth(sm) {
+      @include UiContainer($padding: 2);
+      @include UiPadding(15, top);
+      @include UiPadding(15, bottom);
+    }
+  }
+
+  &__heading {
+    @include UiTypographyHeading2();
+    @include UiTextShadow(4);
+    @include UiTextOutline(3);
+    text-align: center;
+    white-space: nowrap;
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiTypographyHeading3();
+      @include UiTextShadow(3);
+      @include UiTextOutline(2);
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    @include UiGap(30);
+    @include UiMargin(15, top);
+    @include UiMediaMaxWidth(md) {
+      @include UiGap(20);
+    }
+    @include UiMediaMaxWidth(sm) {
+      grid-template-columns: 1fr;
+      @include UiGap(10);
+    }
+  }
+
+  &__item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include UiGap(2);
+  }
+
+  &__item-heading {
+    @include UiTypographyHeading4();
+    @include UiTextShadow(3);
+    @include UiTextOutline(2);
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiTypographyHeading5();
+      @include UiTextShadow(2);
+      @include UiTextOutline(2);
+    }
+  }
+
+  &__item-caption {
+    @include UiTextShadow(2);
+    @include UiTypographyHeading6();
+
+    @include UiMediaMaxWidth(sm) {
+      @include UiTypographyParagraph1();
+      @include UiTextShadow(1);
+    }
+  }
+}

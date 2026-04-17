@@ -1,0 +1,32 @@
+export default {
+  NETWORK_ERROR:
+    'No se pudo establecer conexión con nuestros servidores. Por favor, verifica tu conexión a internet e inténtalo de nuevo.',
+  UNEXPECTED_ERROR: 'Ocurrió un error inesperado. Nuestros desarrolladores ya están trabajando en solucionarlo.',
+  VALIDATION_ERROR: 'Solicitud inválida.',
+  UNAUTHORIZED: 'Error de autorización. Por favor, inténtalo de nuevo o recarga el juego.',
+  EMAIL_INVALID: 'La dirección de correo electrónico proporcionada no es válida.',
+  PASSWORD_INVALID: 'La contraseña proporcionada no es válida.',
+  REFRESH_TOKEN_INVALID: 'Error de autorización. Por favor, inténtalo de nuevo o recarga el juego.',
+  CREDENTIAL_INVALID:
+    'No se pudo encontrar la cuenta. Por favor, pruebe con otras credenciales o contacte a nuestro soporte.',
+  RESTORE_INACTIVE_ACCOUNT_CREDENTIAL_NOT_POSSIBLE: 'No es posible restaurar una credencial para una cuenta inactiva.',
+  RESTORE_TOKEN_INVALID: 'El token de restauración no es válido.',
+  SIGN_IN_TO_INACTIVE_ACCOUNT_NOT_POSSIBLE: 'No es posible iniciar sesión en una cuenta inactiva.',
+  GAME_BELONGS_TO_OTHER_PLAYER: 'Este juego pertenece a otro jugador y no puedes unirte.',
+  VERIFY_TOKEN_INVALID: 'El token de verificación no es válido.',
+  CAPTCHA_INVALID: 'El CAPTCHA proporcionado no es válido.',
+  ENTITY_NOT_FOUND: 'La entidad solicitada no fue encontrada.',
+  CAPTCHA_ERROR: 'Error al verificar el CAPTCHA.',
+  OAUTH_FAILED_ERROR: 'La autorización con un servicio externo falló. Por favor, inténtalo de nuevo.',
+  OAUTH_POPUP_CLOSED: 'La ventana emergente de autorización fue cerrada. Por favor, inténtalo de nuevo.',
+  FAILED_TO_LOAD_GOOGLE_USER_INFO: 'Algo salió mal al autorizarte con Google. Por favor, inténtalo de nuevo.',
+  PROFILE_NAME_IS_ALREADY_TAKEN: 'Este apodo ya está en uso. Por favor, prueba con otro.',
+  CREDENTIAL_IDENTIFIER_ALREADY_USED:
+    'La credencial seleccionada ya está en uso por otra cuenta. Por favor, úsala para iniciar sesión o utiliza otra credencial.',
+  forbidden: 'Acción prohibida.',
+  player_is_not_host: 'Debes ser el anfitrión para realizar esta acción.',
+  player_is_not_in_game: 'No estás en el juego y no puedes unirte.',
+  lobby_not_found: 'Sala no encontrada.',
+  too_many_players: 'Demasiados jugadores están conectados al juego.',
+  forbidden_game_status: 'El estado del juego no permite realizar esta acción.',
+};

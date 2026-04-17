@@ -1,0 +1,95 @@
+export default {
+  roomPreparation: {
+    emptySlot: 'Slot libero',
+    hostPrivateLabel: 'Lobby privata?',
+    visibility: 'Visibilità della lobby',
+    public: 'Pubblica',
+    private: 'Privata',
+    hostTooltip: 'La partita può iniziare quando almeno {n} giocatori si sono uniti.',
+    guestTooltip: "Solo l'host può avviare la partita.",
+    hostSubmit: 'Avvia partita',
+    guestSubmit: "In attesa dell'host...",
+    copy: 'Copia link',
+    invitationLinkLabel: 'Link di invito',
+    invitationLinkCaption: 'Usa il link qui sotto per invitare i tuoi amici alla partita.',
+    visibilityChanged: {
+      public: 'La stanza è ora pubblica e accessibile a chiunque.',
+      private: 'La stanza è ora privata e accessibile solo tramite invito.',
+    },
+    leaveDialog: {
+      title: 'Lascia questa lobby?',
+      text: 'Vuoi disconnetterti da questa lobby e tornare al menu principale?',
+      primaryButtonText: 'Sì',
+      secondaryButtonText: 'No',
+    },
+    addBot: 'Aggiungi un bot',
+    min: 'Min',
+  },
+  results: {
+    heading: 'Finito!',
+    thankYou: 'Grazie per aver giocato!',
+    feedbackQuestion: 'Per favore {0} per aiutarci a migliorare il gioco.',
+    shareFeedback: 'condividi il tuo feedback',
+    feedbackUrl: 'https://forms.gle/KvarNiP6UaUaeNAB9',
+    toMainMenu: 'Al menu principale',
+    playAgain: 'Rigioca',
+    x2: 'x2',
+    getBonusReward: 'Ottieni {n} Essence',
+    rewards: 'Ricompense:',
+    essenceReward: '+{n} Essence',
+    rating: 'Il tuo punteggio',
+  },
+  disconnectDialog: {
+    title: 'Disconnesso',
+    code: {
+      unknown:
+        'Si è verificato un problema e la connessione è stata interrotta. Riprova e se il problema persiste, contatta il supporto.',
+      application_offline:
+        'Il server di gioco è offline. Riprova tra un minuto e se il problema persiste, contatta il supporto.',
+      incorrect_connection_params: 'Impossibile connettersi al gioco a causa di problemi tecnici. Riprova più tardi.',
+      new_connection: 'Ti sei connesso a questa partita da un altro dispositivo.',
+      kick: 'Sei stato espulso da questa stanza.',
+      too_many_players: "Ci sono già troppi giocatori connessi a questa stanza, prova un'altra.",
+      game_already_in_progress: "La partita è già in corso e non puoi unirti, prova un'altra.",
+      game_abandoned:
+        'Tutti i giocatori si sono disconnessi e la partita è stata chiusa. Nessun problema, puoi avviarne una nuova dal menu principale.',
+      player_left:
+        'Un giocatore ha lasciato la partita e la partita è stata chiusa. Solo i giocatori che hanno abbandonato ricevono penalità, gli altri mantengono il punteggio.',
+    },
+    reconnect: 'Riconnetti',
+    toMainMenu: 'Al menu principale',
+  },
+  unexpectedError: 'Errore imprevisto, riprova più tardi.',
+  kickPlayerDialog: {
+    title: 'Espelli giocatore dalla lobby',
+    text: 'Vuoi davvero espellere questo giocatore dalla lobby?',
+    primaryButtonText: 'Sì',
+    secondaryButtonText: 'No',
+  },
+  leaveGame: 'Abbandona questa partita',
+  leaveGameDialog: {
+    title: 'Abbandonare la partita?',
+    text: 'Questa partita verrà conteggiata come una sconfitta e non potrai più unirti. Sei sicuro?',
+    primaryButtonText: 'Sì',
+    secondaryButtonText: 'No',
+  },
+  search: {
+    heading: 'Ricerca partita',
+    cancel: 'Annulla ricerca',
+    cancelDialog: {
+      text: 'Annullare la ricerca?',
+      primaryButtonText: 'Sì',
+      secondaryButtonText: 'No',
+    },
+  },
+  pause: {
+    title: 'Pausa',
+    reason: {
+      player_disconnected: 'In attesa dei giocatori disconnessi. La partita riprenderà a breve.',
+      unknown: 'La partita è in pausa per motivi sconosciuti, ma riprenderà a breve.',
+    },
+  },
+  playerLeftGame: 'Il giocatore "{name}" ha lasciato la partita.',
+  skipTurn: 'Salta turno',
+  drawCard: 'Pesca carta e salta turno',
+};

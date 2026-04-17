@@ -1,0 +1,32 @@
+export default {
+  NETWORK_ERROR:
+    'Impossible d’établir la connexion avec nos serveurs. Veuillez vérifier votre connexion Internet et réessayer.',
+  UNEXPECTED_ERROR: 'Une erreur inattendue est survenue. Nos développeurs ont déjà commencé à la corriger.',
+  VALIDATION_ERROR: 'Requête invalide.',
+  UNAUTHORIZED: "Erreur d'autorisation. Veuillez réessayer ou recharger le jeu.",
+  EMAIL_INVALID: "L'adresse e-mail fournie est invalide.",
+  PASSWORD_INVALID: 'Le mot de passe fourni est invalide.',
+  REFRESH_TOKEN_INVALID: "Erreur d'autorisation. Veuillez réessayer ou recharger le jeu.",
+  CREDENTIAL_INVALID: "Compte introuvable. Veuillez essayer d'autres identifiants ou contacter notre support.",
+  RESTORE_INACTIVE_ACCOUNT_CREDENTIAL_NOT_POSSIBLE:
+    "Il n'est pas possible de restaurer une identité pour un compte inactif.",
+  RESTORE_TOKEN_INVALID: 'Le jeton de restauration est invalide.',
+  SIGN_IN_TO_INACTIVE_ACCOUNT_NOT_POSSIBLE: "La connexion à un compte inactif n'est pas possible.",
+  GAME_BELONGS_TO_OTHER_PLAYER: 'Cette partie appartient à un autre joueur et vous ne pouvez pas la rejoindre.',
+  VERIFY_TOKEN_INVALID: 'Le jeton de vérification est invalide.',
+  CAPTCHA_INVALID: 'Le CAPTCHA fourni est invalide.',
+  ENTITY_NOT_FOUND: "L'entité demandée est introuvable.",
+  CAPTCHA_ERROR: 'Échec de la vérification du CAPTCHA.',
+  OAUTH_FAILED_ERROR: "L'autorisation avec un service tiers a échoué. Veuillez réessayer.",
+  OAUTH_POPUP_CLOSED: "La fenêtre d'autorisation a été fermée. Veuillez réessayer.",
+  FAILED_TO_LOAD_GOOGLE_USER_INFO: "Une erreur est survenue lors de l'autorisation via Google. Veuillez réessayer.",
+  PROFILE_NAME_IS_ALREADY_TAKEN: 'Ce pseudonyme est déjà pris. Veuillez en essayer un autre.',
+  CREDENTIAL_IDENTIFIER_ALREADY_USED:
+    "L'identifiant sélectionné est déjà utilisé par un autre compte. Veuillez l'utiliser pour vous connecter ou utiliser un autre identifiant.",
+  forbidden: 'Action interdite.',
+  player_is_not_host: 'Vous devez être l’hôte pour effectuer cette action.',
+  player_is_not_in_game: "Vous n'êtes pas dans la partie et ne pouvez pas la rejoindre.",
+  lobby_not_found: 'Salon introuvable.',
+  too_many_players: 'Trop de joueurs sont connectés à la partie.',
+  forbidden_game_status: "Le statut de la partie interdit d'effectuer cette action.",
+};

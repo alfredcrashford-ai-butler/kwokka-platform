@@ -1,0 +1,11 @@
+:root {
+  --pwsm-box-shadow-1: 0 #{UiSpacing(0.25)} #{UiSpacing(0.25)} #{UiSpacing(0.25)} rgba(0, 0, 0, 0.25);
+  --pwsm-box-shadow-2:
+    var(--pwsm-box-shadow-1), 0 #{UiSpacing(0.25)} #{UiSpacing(0.5)} #{UiSpacing(0.5)} rgba(0, 0, 0, 0.25);
+  --pwsm-box-shadow-3:
+    var(--pwsm-box-shadow-2), 0 #{UiSpacing(0.25)} #{UiSpacing(1)} #{UiSpacing(1)} rgba(0, 0, 0, 0.25);
+}
+
+@mixin UiBoxShadow($size) {
+  box-shadow: var(--pwsm-box-shadow-#{$size});
+}

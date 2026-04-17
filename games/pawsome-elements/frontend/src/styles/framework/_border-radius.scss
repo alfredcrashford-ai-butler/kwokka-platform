@@ -1,0 +1,3 @@
+@mixin UiBorderRadius($size) {
+  border-radius: UiSpacing($size);
+}

@@ -1,0 +1,12 @@
+services:
+  pwsm-eu-central-1:
+    container_name: pwsm-eu-central-1
+    extends:
+      file: pwsm.yaml
+      service: pwsm
+    environment:
+      - GAME_SERVER_HOST=https://api.pawsome-elements.com
+    healthcheck:
+      test: curl pwsm-eu-central-1:8080/healthcheck
+    volumes:
+      - ./data/pwsm-eu-central-1:/data/pwsm-eu-central-1

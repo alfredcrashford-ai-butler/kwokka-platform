@@ -1,0 +1,26 @@
+// fallback for font family to support
+$font-fallback:
+  -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+
+/* piazzolla-700 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Piazzolla';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('/static/fonts/piazzolla-v35-cyrillic_latin-700.woff2') format('woff2'),
+    url('/static/fonts/piazzolla-v35-cyrillic_latin-700.ttf') format('truetype');
+}
+
+/* piazzolla-900 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Piazzolla';
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url('/static/fonts/piazzolla-v35-cyrillic_latin-900.woff2') format('woff2'),
+    url('/static/fonts/piazzolla-v35-cyrillic_latin-900.ttf') format('truetype');
+}

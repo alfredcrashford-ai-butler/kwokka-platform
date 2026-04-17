@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="first-level-layout">
+  {% include "blocks/header.njk" %}
+
+  {{ content | safe }}
+
+  {% include 'blocks/footer.njk' %}
+</div>

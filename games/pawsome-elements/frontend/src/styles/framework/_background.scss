@@ -1,0 +1,5 @@
+@mixin UiTavernBackground() {
+  background-image: url('/static/ui/background.webp');
+  background-size: cover;
+  background-position: center;
+}

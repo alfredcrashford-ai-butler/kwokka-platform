@@ -1,0 +1,95 @@
+export default {
+  roomPreparation: {
+    emptySlot: 'Free slot',
+    hostPrivateLabel: 'Private lobby?',
+    visibility: 'Lobby visibility',
+    public: 'Public',
+    private: 'Private',
+    hostTooltip: 'The game can be started when there are at least {n} players joined.',
+    guestTooltip: 'Only host player can start the game.',
+    hostSubmit: 'Start Game',
+    guestSubmit: 'Waiting For Host...',
+    copy: 'Copy link',
+    invitationLinkLabel: 'Invitation link',
+    invitationLinkCaption: 'Use the link below to invite your friends to the game.',
+    visibilityChanged: {
+      public: 'The room is now public and can be accessed by anyone.',
+      private: 'The room is now private and can only be accessed by an invitation.',
+    },
+    leaveDialog: {
+      title: 'Leave this lobby?',
+      text: 'Do you want to disconnect from this lobby and navigate back to the main menu?',
+      primaryButtonText: 'Yes',
+      secondaryButtonText: 'No',
+    },
+    addBot: 'Add a bot',
+    min: 'Min',
+  },
+  results: {
+    heading: 'Finished!',
+    thankYou: 'Thank you for playing!',
+    feedbackQuestion: 'Please {0} so we could make this game better.',
+    shareFeedback: 'share your feedback',
+    feedbackUrl: 'https://forms.gle/KvarNiP6UaUaeNAB9',
+    toMainMenu: 'To main menu',
+    playAgain: 'Play again',
+    x2: 'x2',
+    getBonusReward: 'Get {n} Essence',
+    rewards: 'Rewards:',
+    essenceReward: '+{n} Essence',
+    rating: 'Your Rating',
+  },
+  disconnectDialog: {
+    title: 'Disconnected',
+    code: {
+      unknown:
+        'Something went wrong and your connection was interrupted. Please, try to reconnect and if the issue is still there - please contact our support.',
+      application_offline:
+        'The game server is offline now. Please try to reconnect in a minute and if the issue is still there - please contact our support.',
+      incorrect_connection_params: 'Could not connect to the game due to technical issues. Please try again later.',
+      new_connection: 'You have connected to this game using other device.',
+      kick: 'You were kicked from this room.',
+      too_many_players: 'There are too many players connected to this room already, try another one.',
+      game_already_in_progress: 'This game is already in progress and you can not join it, try another one.',
+      game_abandoned:
+        'All players have disconnected from this game and we closed it. No worries, you can start a new one from the main menu.',
+      player_left:
+        "A player has left this game for good and we closed it. Only players who left have gotten penalties, the other players' rating is left the same.",
+    },
+    reconnect: 'Reconnect',
+    toMainMenu: 'To main menu',
+  },
+  unexpectedError: 'Unexpected error occurred, please try again later.',
+  kickPlayerDialog: {
+    title: 'Kick player from lobby',
+    text: 'Do you really want to kick this player from this lobby?',
+    primaryButtonText: 'Yes',
+    secondaryButtonText: 'No',
+  },
+  leaveGame: 'Leave this game',
+  leaveGameDialog: {
+    title: 'Leave this game?',
+    text: 'This game will be counted as a lose for you and you will not be able to join it again. Are you sure?',
+    primaryButtonText: 'Yes',
+    secondaryButtonText: 'No',
+  },
+  search: {
+    heading: 'Searching for a Match',
+    cancel: 'Cancel search',
+    cancelDialog: {
+      text: 'Cancel search?',
+      primaryButtonText: 'Yes',
+      secondaryButtonText: 'No',
+    },
+  },
+  pause: {
+    title: 'Pause',
+    reason: {
+      player_disconnected: 'Waiting for disconnected players. The game will continue shortly.',
+      unknown: 'The game is paused due to the reasons beyond understanding, but it will continue shortly.',
+    },
+  },
+  playerLeftGame: 'Player "{name}" left the game.',
+  skipTurn: 'Skip turn',
+  drawCard: 'Draw card and skip turn',
+};

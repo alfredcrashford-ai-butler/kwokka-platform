@@ -1,0 +1,65 @@
+// HEADINGS
+
+@mixin UiTypographyHeading1() {
+  font-size: calc(var(--pwsm--font-size) * 2);
+  line-height: 1.25;
+}
+
+@mixin UiTypographyHeading2() {
+  font-size: calc(var(--pwsm--font-size) * 1.82);
+  line-height: 1.25;
+}
+
+@mixin UiTypographyHeading3() {
+  font-size: calc(var(--pwsm--font-size) * 1.66);
+  line-height: 1.25;
+}
+
+@mixin UiTypographyHeading4() {
+  font-size: calc(var(--pwsm--font-size) * 1.5);
+  line-height: 1.25;
+}
+
+@mixin UiTypographyHeading5() {
+  font-size: calc(var(--pwsm--font-size) * 1.3);
+  line-height: 1.15;
+}
+
+@mixin UiTypographyHeading6() {
+  font-size: calc(var(--pwsm--font-size) * 1.15);
+  line-height: 1.15;
+}
+
+// PARAGRAPHS
+
+@mixin UiTypographyParagraph1() {
+  font-size: var(--pwsm--font-size);
+  line-height: 1.1;
+}
+
+@mixin UiTypographyParagraph2() {
+  font-size: calc(var(--pwsm--font-size) * 0.75);
+  line-height: 1;
+}
+
+@mixin UiTypographyParagraph3() {
+  font-size: calc(var(--pwsm--font-size) * 0.65);
+  line-height: 1;
+}
+
+// INTERACTIVE ELEMENTS
+
+@mixin UiTypographyLink {
+  color: UiColor(primary-500);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+@mixin UiTypographyMonospace {
+  font-family: 'Lucida Console', 'Courier New', monospace;
+}

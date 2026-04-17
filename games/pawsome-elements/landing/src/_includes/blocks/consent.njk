@@ -1,0 +1,28 @@
+<script type="text/javascript" src="/public/script/cookie-consent-lib.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/public/script/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/public/script/cookie-consent-translations-{{ locale }}.js" charset="UTF-8"></script>
+<!-- Google Analytics -->
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-SVKCBLB63S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  function updateGtagConsent() {
+    gtag('consent', 'update', KwokkaCookieConsent.getGtagConsent());
+  }
+
+  gtag('consent', 'default', KwokkaCookieConsent.getDefaultGtagConsent());
+  gtag('js', new Date());
+  gtag('config', 'G-SVKCBLB63S');
+
+  KwokkaCookieConsent.run('{{ locale }}', KwokkaCookieConsentTranslations);
+  KwokkaCookieConsent.setOnConsent(() => updateGtagConsent());
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target && target.closest('[data-cookie-consent="showPreferences"]')) {
+      KwokkaCookieConsent.showPreferences();
+    }
+  });
+</script>
+<!-- end of Google Analytics-->

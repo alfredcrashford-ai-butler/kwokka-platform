@@ -1,0 +1,20 @@
+export default {
+  play: 'プレイ',
+  practice: '練習',
+  shop: 'ショップ',
+  atlas: 'アトラス',
+  journal: 'ジャーナル',
+  signOut: 'サインアウト',
+  signOutConfirmation: '本当にサインアウトしますか？',
+  signUp: {
+    button: '進行状況を保存',
+    description: 'ゲストとして入っています。サインアップして：',
+    saveProgress: '進行状況を安全に保存',
+    shareProgress: '複数デバイスで進行状況を共有',
+    heading: 'サインアップ',
+    success: 'サインアップに成功しました！',
+    alreadyHaveAccount: '既にアカウントをお持ちの方',
+    or: 'または',
+    createNewAccount: '新規アカウント作成',
+  },
+};

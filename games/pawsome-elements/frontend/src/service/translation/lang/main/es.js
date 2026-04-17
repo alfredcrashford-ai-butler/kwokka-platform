@@ -1,0 +1,20 @@
+export default {
+  play: 'Jugar',
+  practice: 'Práctica',
+  shop: 'Tienda',
+  atlas: 'Atlas',
+  journal: 'Diario',
+  signOut: 'Cerrar sesión',
+  signOutConfirmation: '¿Estás seguro de que quieres cerrar sesión?',
+  signUp: {
+    button: 'Guardar progreso',
+    description: 'Has ingresado como invitado. Regístrate para:',
+    saveProgress: 'Guardar tu progreso de forma segura',
+    shareProgress: 'Compartir tu progreso en varios dispositivos',
+    heading: 'Registrarse',
+    success: '¡Registro exitoso!',
+    alreadyHaveAccount: 'Ya tengo una cuenta',
+    or: 'O',
+    createNewAccount: 'Crear nueva cuenta',
+  },
+};

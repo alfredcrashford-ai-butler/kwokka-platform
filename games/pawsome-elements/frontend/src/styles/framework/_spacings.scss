@@ -1,0 +1,32 @@
+@mixin UiPadding($size, $side: null) {
+  $property-name: padding;
+
+  @if ($side) {
+    $property-name: padding-#{$side};
+  }
+
+  #{$property-name}: UiSpacing($size);
+}
+
+@mixin UiMargin($size, $side: null) {
+  $property-name: margin;
+
+  @if ($side) {
+    $property-name: margin-#{$side};
+  }
+
+  #{$property-name}: UiSpacing($size);
+}
+
+@mixin UiGap($sizeOrSizeY, $sizeX: 0) {
+  $value: #{UiSpacing($sizeOrSizeY)};
+  @if ($sizeX > 0) {
+    $value: $value #{UiSpacing($sizeX)};
+  }
+
+  gap: $value;
+}
+
+@function UiSpacing($size) {
+  @return calc(#{$size} * var(--pwsm--spacing-unit));
+}

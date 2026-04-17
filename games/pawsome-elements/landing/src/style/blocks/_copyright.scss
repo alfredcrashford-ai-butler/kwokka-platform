@@ -1,0 +1,21 @@
+.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  @include UiGap(5);
+
+  @include UiMediaMaxWidth(md) {
+    align-items: center;
+  }
+
+  &__text {
+    @include UiTextShadow(1);
+    @include UiTypographyParagraph2();
+  }
+
+  &__kwokka-logo {
+    width: 100%;
+    max-width: UiSpacing(60);
+  }
+}

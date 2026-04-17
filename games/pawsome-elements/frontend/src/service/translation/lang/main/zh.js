@@ -1,0 +1,20 @@
+export default {
+  play: '开始游戏',
+  practice: '练习',
+  shop: '商店',
+  atlas: '地图集',
+  journal: '日志',
+  signOut: '登出',
+  signOutConfirmation: '确定要登出吗？',
+  signUp: {
+    button: '保存进度',
+    description: '您以游客身份进入。注册以：',
+    saveProgress: '安全保存您的进度',
+    shareProgress: '在多个设备间共享进度',
+    heading: '注册',
+    success: '注册成功！',
+    alreadyHaveAccount: '已有账号',
+    or: '或',
+    createNewAccount: '创建新账号',
+  },
+};
