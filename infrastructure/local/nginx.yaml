@@ -1,0 +1,19 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - 8081:8081
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/:readonly
+      - ./nginx/includes:/etc/nginx/includes/:readonly
+    depends_on:
+      owl:
+        condition: service_healthy
+      owl-subauth:
+        condition: service_healthy
+      capybara:
+        condition: service_healthy
+      zebra:
+        condition: service_healthy
