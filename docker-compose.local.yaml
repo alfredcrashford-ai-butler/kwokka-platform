@@ -1,0 +1,12 @@
+name: kwokka-platform-local
+include:
+  - infrastructure/local/capybara.yaml
+  - infrastructure/local/owl.yaml
+  - infrastructure/local/owl-subauth.yaml
+  - infrastructure/local/zebra.yaml
+  - infrastructure/local/nginx.yaml
+  - infrastructure/local/mongodb.yaml
+  - infrastructure/local/prometheus.yaml
+  - infrastructure/local/redpanda.yaml
+volumes:
+  shared_volume:

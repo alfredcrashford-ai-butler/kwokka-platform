@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+  
+  - job_name: 'owl'
+    static_configs:
+      - targets: ['owl:8080']
+  
+  - job_name: 'capybara'
+    static_configs:
+      - targets: ['capybara:8080']
+  
+  - job_name: 'zebra'
+    static_configs:
+      - targets: ['zebra:8080']

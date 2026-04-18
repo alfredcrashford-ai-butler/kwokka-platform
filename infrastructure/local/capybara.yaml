@@ -1,0 +1,37 @@
+services:
+  capybara:
+    container_name: capybara
+    image: kwokka/capybara:local
+    build:
+      context: ../../applications/capybara
+      dockerfile: ./Dockerfile
+      args:
+        - NODE_AUTH_TOKEN
+    command: "npm run start"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      owl:
+        condition: service_healthy
+    environment:
+      - NODE_ENV=development
+      - HOST=http://local.kwokka.co:8081
+      - PORT=8080
+      - MONGODB_URI=mongodb://mongodb:27017/capybara
+      - OWL_MONGODB_URI=mongodb://mongodb:27017/owl
+      - SENTRY_DSN
+    healthcheck:
+      test: curl capybara:8080/healthcheck
+      interval: 3s
+      timeout: 10s
+      retries: 15
+      start_period: 5s
+    develop:
+      watch:
+        - action: sync
+          path: ../../applications/capybara
+          target: ./capybara
+          ignore:
+            - node_modules/
+    volumes:
+      - ./data/capybara:/data/capybara

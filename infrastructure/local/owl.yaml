@@ -1,0 +1,38 @@
+services:
+  owl:
+    container_name: owl
+    image: kwokka/owl:local
+    build:
+      context: ../../applications/owl
+      dockerfile: ./Dockerfile
+      args:
+        - NODE_AUTH_TOKEN
+    command: "npm run start"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      - NODE_ENV=development
+      - HOST=http://local.kwokka.co:8081
+      - PORT=8080
+      - MONGODB_URI=mongodb://mongodb:27017/owl
+      - SENTRY_DSN
+      - JWT_KEY
+      - MAILERSEND_API_KEY
+      - HCAPTCHA_SECRET_KEY
+      - GOOGLE_OAUTH2_CLIENT_ID
+    healthcheck:
+      test: curl owl:8080/healthcheck
+      interval: 3s
+      timeout: 10s
+      retries: 15
+      start_period: 5s
+    develop:
+      watch:
+        - action: sync
+          path: ../../applications/owl
+          target: ./owl
+          ignore:
+            - node_modules/
+    volumes:
+      - ./data/owl:/data/owl

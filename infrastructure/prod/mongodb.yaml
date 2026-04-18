@@ -1,0 +1,16 @@
+services:
+  mongodb:
+    image: mongo:8
+    container_name: mongodb
+    ports:
+      - 27018:27017
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh mongodb:27017/test --quiet
+      interval: 3s
+      timeout: 10s
+      retries: 15
+      start_period: 5s
+    volumes:
+      - ./data/mongo/mongodb:/data/mongodb
+      - ./data/mongo/configdb:/data/configdb
+      - ./data/mongo/db:/data/db

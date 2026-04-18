@@ -1,0 +1,21 @@
+services:
+  redpanda:
+    image: redpandadata/redpanda:latest
+    container_name: redpanda
+    ports:
+      - 8082:8082
+      - 9092:9092
+    environment:
+      - REDPANDA_KAFKA_VERSION=3.4.0
+      - REDPANDA_KAFKA_ADVERTISED_LISTENERS=plaintext://redpanda:9092
+      - REDPANDA_KAFKA_LISTENERS=plaintext://0.0.0.0:9092,internal://0.0.0.0:19092
+      - REDPANDA_KAFKA_LISTENERS_LISTENER_SECURITY_PROTOCOL_MAP=plaintext:plaintext,internal:plaintext
+      - REDPANDA_KAFKA_ADVERTISED_LISTENERS_LISTENER_SECURITY_PROTOCOL_MAP=plaintext:plaintext,internal:plaintext
+    healthcheck:
+      test: ["CMD", "redpanda-cc", "list-brokers"]
+      interval: 3s
+      timeout: 10s
+      retries: 15
+      start_period: 5s
+    volumes:
+      - ./data/redpanda:/data/redpanda
