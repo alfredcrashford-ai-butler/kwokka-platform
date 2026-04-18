@@ -1,0 +1,37 @@
+services:
+  zebra:
+    container_name: zebra
+    image: kwokka/zebra:local
+    build:
+      context: ../../applications/zebra
+      dockerfile: ./Dockerfile
+      args:
+        - NODE_AUTH_TOKEN
+    command: "npm run start"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      owl:
+        condition: service_healthy
+    environment:
+      - NODE_ENV=development
+      - HOST=http://local.kwokka.co:8081
+      - PORT=8080
+      - MONGODB_URI=mongodb://mongodb:27017/zebra
+      - OWL_MONGODB_URI=mongodb://mongodb:27017/owl
+      - SENTRY_DSN
+    healthcheck:
+      test: curl zebra:8080/healthcheck
+      interval: 3s
+      timeout: 10s
+      retries: 15
+      start_period: 5s
+    develop:
+      watch:
+        - action: sync
+          path: ../../applications/zebra
+          target: ./zebra
+          ignore:
+            - node_modules/
+    volumes:
+      - ./data/zebra:/data/zebra
