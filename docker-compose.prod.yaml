@@ -1,0 +1,13 @@
+name: kwokka-platform-prod
+include:
+  - infrastructure/prod/oauth2-proxy.yaml
+  - infrastructure/prod/capybara.yaml
+  - infrastructure/prod/owl.yaml
+  - infrastructure/prod/owl-subauth.yaml
+  - infrastructure/prod/zebra.yaml
+  - infrastructure/prod/nginx.yaml
+  - infrastructure/prod/mongodb.yaml
+  - infrastructure/prod/prometheus.yaml
+  - infrastructure/prod/redpanda.yaml
+volumes:
+  shared_volume:

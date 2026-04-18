@@ -1,0 +1,32 @@
+services:
+  owl-subauth:
+    container_name: owl-subauth
+    image: kwokka/owl-subauth:latest
+    build:
+      context: ../../applications/owl-subauth
+      dockerfile: ./Dockerfile
+      args:
+        - NODE_AUTH_TOKEN
+    command: "npm run start"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      - NODE_ENV=production
+      - HOST=https://kwokka.co
+      - PORT=8080
+      - MONGODB_URI=mongodb://mongodb:27017/owl-subauth
+      - SENTRY_DSN
+      - JWT_KEY
+      - MAILERSEND_API_KEY
+      - HCAPTCHA_SECRET_KEY
+      - GOOGLE_OAUTH2_CLIENT_ID
+    healthcheck:
+      test: curl owl-subauth:8080/healthcheck
+      interval: 3s
+      timeout: 10s
+      retries: 15
+      start_period: 5s
+    volumes:
+      - ./data/owl-subauth:/data/owl-subauth
+    restart: unless-stopped
